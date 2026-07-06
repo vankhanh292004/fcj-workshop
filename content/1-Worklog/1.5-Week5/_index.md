@@ -16,7 +16,7 @@ pre: " <b> 1.5. </b> "
 | 1 | Read Amazon EC2 overview documentation: explore the Instance Lifecycle, operational states, and Key Pair security mechanics. | 18/05/2026 | 18/05/2026 | Amazon EC2 Documentation |
 | 2 | Learn basic concepts of Serverless computing and the event-driven execution design of AWS Lambda functions. | 19/05/2026 | 19/05/2026 | AWS Lambda Documentation |
 | 3 | Perform a theoretical comparative analysis between EC2 and Lambda regarding infrastructure management, auto-scaling mechanisms, and pricing models. | 20/05/2026 | 20/05/2026 | AWS Compute Blog |
-| 4 | Discuss web architecture models at a high level with group members: evaluate whether a Spring Boot app (such as the Pet Shop backend) fits traditional EC2 or Serverless Lambda better. | 21/05/2026 | 21/05/2026 | |
+| 4 | Discuss web architecture models at a high level with group members: evaluate whether a Spring Boot app (such as the Pet Resort backend) fits traditional EC2 or Serverless Lambda better. | 21/05/2026 | 21/05/2026 | |
 | 5 | Systematize the theoretical knowledge gathered during the week and update the progress log into the local Hugo system. | 22/05/2026 | 22/05/2026 | |
 
 ### Week 5 Achievements:

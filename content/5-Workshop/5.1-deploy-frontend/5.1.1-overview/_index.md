@@ -70,7 +70,7 @@ By cleverly utilizing the AWS Free Tier, the maintenance cost for this system is
 - ✅ **RDS Database:** 750 hours/month free (Free Tier).
 - ✅ **S3 Storage & CloudFront:** Within the free tier limits.
 
-**Actual estimated costs:** Approximately **$50 - $70/month**. This cost is primarily for maintaining 2 critical network services: the NAT Gateway and the Load Balancer, ensuring enterprise-grade architecture standards.
+**Actual estimated costs:** Approximately **$50 - $70/month** for the practice environment. This cost is primarily for maintaining 2 critical network services: the NAT Gateway and the Load Balancer. The full production Multi-AZ architecture (as described in the Proposal) costs approximately **~$168/month**.
 
 {{% notice tip %}}
 💡 **Tip:** During practice, if you don't need a production-ready setup yet, you can temporarily disable the NAT Gateway and run the Database in Single-AZ mode to maximize your cost savings.

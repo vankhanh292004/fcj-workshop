@@ -6,7 +6,7 @@ pre: " <b> 1.10. </b> "
 ---
 
 ### Week 10 Objectives:
-* Focus on analyzing, drafting, and refining the System Architecture Diagram for the Pet Shop & Invoice project.
+* Focus on analyzing, drafting, and refining the System Architecture Diagram for the Pet Resort & Care project.
 * Research and reference architecture evaluation threads and admin comments within the AWS Study Group community to optimize the design.
 * Review all data transit vectors on the blueprint, ensuring alignment with the simplified infrastructure directions studied in Weeks 8 and 9.
 
@@ -16,7 +16,7 @@ pre: " <b> 1.10. </b> "
 | 1 | - Analyze the physical directory boundaries of the local source code to map functional tiers (ReactJS Frontend, Spring Boot Backend, MySQL Database).<br>- Sketch the initial blueprint on Draw.io. | 22/06/2026 | 22/06/2026 | System Block Diagram |
 | 2 | - Attend the office and browse the AWS Study Group community platforms to evaluate infrastructure blueprints from prior cohorts.<br>- Compile common architectural design pitfalls based on Admin review comments. | 23/06/2026 | 23/06/2026 | AWS Study Group Community |
 | 3 | - Cross-reference the team's blueprint with the actual codebase; inspect if connection flows are over-engineered or include unutilized services.<br>- Verify the technical logic of API routing arrows. | 24/06/2026 | 24/06/2026 | |
-| 4 | - Execute structural updates to the diagram: explicitly isolate the Amazon VPC boundaries, server boundaries, and managed RDS MySQL Single-AZ layers to follow the cost-efficiency plans from Weeks 8 & 9. | 25/06/2026 | 25/06/2026 | AWS Architecture Icon Set |
+| 4 | - Execute structural updates to the diagram: explicitly isolate the Amazon VPC boundaries, server placement across multiple Availability Zones, and managed RDS MySQL layers to align with the High Availability architecture direction. | 25/06/2026 | 25/06/2026 | AWS Architecture Icon Set |
 | 5 | - Finalize the formal high-level group system architecture blueprint.<br>- Author brief functional logs detailing data interaction paths, review the complete registry layout, and push updates to Hugo. | 26/06/2026 | 26/06/2026 | |
 
 ### Week 10 Achievements:

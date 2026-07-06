@@ -6,7 +6,7 @@ pre: " <b> 1.9. </b> "
 ---
 
 ### Mục tiêu tuần 9:
-* Tối ưu hóa cấu hình bảo mật mã nguồn và hiệu suất truy vấn cơ sở dữ liệu local cho dự án Pet Shop & Invoice.
+* Tối ưu hóa cấu hình bảo mật mã nguồn và hiệu suất truy vấn cơ sở dữ liệu local cho dự án Pet Resort & Care.
 * Nghiên cứu lý thuyết về các công cụ giám sát (Monitoring) và ghi nhật ký hệ thống (Logging) trên AWS.
 * Thực hiện kiểm thử các kịch bản ngoại lệ (Edge Cases) dưới môi trường local để chuẩn bị cho việc triển khai diện rộng.
 
@@ -16,7 +16,7 @@ pre: " <b> 1.9. </b> "
 | 1 | - Rà soát các lớp dịch vụ `ProductServiceImpl`, `BookingServiceImpl` phía Backend.<br>- Kiểm tra và tối ưu hóa các câu truy vấn JPA/Hibernate liên quan đến bảng đơn hàng và lịch hẹn để tránh lỗi N+1 Query. | 15/06/2026 | 15/06/2026 | Spring Data JPA Guide |
 | 2 | - Tìm hiểu lý thuyết dịch vụ giám sát **Amazon CloudWatch**.<br>- Nghiên cứu các khái niệm cơ bản: CloudWatch Metrics (CPU Utilization, Network In/Out), Log Groups và cơ chế hoạt động của CloudWatch Alarms. | 16/06/2026 | 16/06/2026 | Tài liệu Amazon CloudWatch |
 | 3 | - Tiến hành bảo mật tệp `application.yml` bằng cách tách các thông tin nhạy cảm (URL kết nối DB, Username, Password, Secret Key của JWT Provider) ra khỏi mã nguồn thuần túy.<br>- Chuyển đổi cấu hình sang dạng sử dụng các biến môi trường hệ thống (Environment Variables). | 17/06/2026 | 17/06/2026 | AWS Security Best Practices |
-| 4 | - Đọc tài liệu về giao diện giám sát hiệu năng mặc định của AWS Elastic Beanstalk (Beanstalk Dashboard).<br>- Tìm hiểu ý nghĩa của các chỉ số sức khỏe hệ thống (Health Metrics: Green, Yellow, Red) nhằm phục vụ công tác quản trị sau này. | 18/06/2026 | 18/06/2026 | AWS Beanstalk Platform Docs |
+| 4 | - Tìm hiểu cách xây dựng **Amazon CloudWatch Dashboard** để giám sát máy chủ EC2 và Application Load Balancer.<br>- Học cách tạo Dashboard tùy chỉnh kết hợp các chỉ số CPU, Memory, Network và trạng thái Health Check của ALB phục vụ công tác quản trị sau này. | 18/06/2026 | 18/06/2026 | AWS CloudWatch Dashboard Docs |
 | 5 | - Sử dụng công cụ Postman để thực hiện kiểm thử diện rộng các kịch bản lỗi cục bộ (Error Scenarios): Giả lập gửi Token JWT hết hạn, truyền dữ liệu không hợp lệ vào API đặt lịch.<br>- Hoàn thiện bộ lọc xử lý lỗi tập trung `GlobalExceptionHandler` và cập nhật Hugo. | 19/06/2026 | 19/06/2026 | Guide to API Error Handling |
 
 ### Kết quả đạt được tuần 9:

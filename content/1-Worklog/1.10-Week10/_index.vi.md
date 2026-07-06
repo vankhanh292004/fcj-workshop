@@ -6,7 +6,7 @@ pre: " <b> 1.10. </b> "
 ---
 
 ### Mục tiêu tuần 10:
-* Tập trung phân tích, phác thảo và hiệu chỉnh sơ đồ kiến trúc hệ thống (Architecture Diagram) cho dự án Pet Shop & Invoice.
+* Tập trung phân tích, phác thảo và hiệu chỉnh sơ đồ kiến trúc hệ thống (Architecture Diagram) cho dự án Pet Resort & Care.
 * Nghiên cứu và tham khảo các bài viết, nhận xét (Comments) của các Admin trên cộng đồng AWS Study Group để tối ưu hóa thiết kế.
 * Rà soát toàn bộ luồng đi của dữ liệu trên sơ đồ, đảm bảo tính nhất quán với định hướng hạ tầng đơn giản đã nghiên cứu ở Tuần 8 và Tuần 9.
 
@@ -16,7 +16,7 @@ pre: " <b> 1.10. </b> "
 | 1 | - Phân tích cấu trúc thư mục mã nguồn thực tế của dự án để phác thảo các phân lớp chức năng (Frontend ReactJS, Backend Spring Boot, Database MySQL).<br>- Vẽ bản nháp đầu tiên của sơ đồ trên Draw.io. | 22/06/2026 | 22/06/2026 | Sơ đồ khối hệ thống |
 | 2 | - Lên văn phòng và truy cập cộng đồng AWS Study Group để đọc các bài đánh giá kiến trúc của các khóa trước.<br>- Tổng hợp các lỗi thiết kế hệ thống thường gặp thông qua các comment review của Admin. | 23/06/2026 | 23/06/2026 | Cộng đồng AWS Study Group |
 | 3 | - Đối chiếu sơ đồ kiến trúc của nhóm với phần mã nguồn thực tế; rà soát xem luồng kết nối có bị quá sức hoặc xuất hiện các dịch vụ không có trong code hay không.<br>- Kiểm tra tính logic của các mũi tên chỉ luồng API. | 24/06/2026 | 24/06/2026 | |
-| 4 | - Thực hiện chỉnh sửa, tối ưu hóa sơ đồ: Phân tách rõ ràng phân vùng mạng ảo VPC, vị trí đặt máy chủ và cơ sở dữ liệu quan hệ RDS MySQL Single-AZ nhằm bám sát định hướng tối ưu chi phí ở Tuần 8 & 9. | 25/06/2026 | 25/06/2026 | AWS Architecture Icon Set |
+| 4 | - Thực hiện chỉnh sửa, tối ưu hóa sơ đồ: Phân tách rõ ràng phân vùng mạng ảo VPC, vị trí đặt máy chủ trên nhiều Vùng sẵn sàng (Availability Zones) và cơ sở dữ liệu RDS MySQL nhằm bám sát định hướng kiến trúc High Availability. | 25/06/2026 | 25/06/2026 | AWS Architecture Icon Set |
 | 5 | - Hoàn thiện bản vẽ kiến trúc tổng quan (Architecture Blueprint) cấp độ nhóm.<br>- Viết tài liệu mô tả ngắn gọn luồng tương tác giữa các thành viên, rà soát lại toàn bộ hệ thống và cập nhật tiến độ tuần lên Hugo. | 26/06/2026 | 26/06/2026 | |
 
 ### Kết quả đạt được tuần 10:

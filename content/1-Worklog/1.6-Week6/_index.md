@@ -8,7 +8,7 @@ pre: " <b> 1.6. </b> "
 ### Week 6 Objectives:
 * Attend the office for self-study sessions and group discussions to resolve outstanding cloud infrastructure queries.
 * Review, audit, and systematize knowledge regarding the core service groups covered (IAM, S3, VPC, EC2).
-* Investigate theoretical static hosting solutions and draft the preliminary architecture diagram for the Pet Shop & Invoice project.
+* Investigate theoretical static hosting solutions and draft the preliminary architecture diagram for the Pet Resort & Care project.
 
 ### Tasks carried out this week:
 | Day | Task | Start Date | Completion Date | Reference Material |
@@ -17,7 +17,7 @@ pre: " <b> 1.6. </b> "
 | 2 | Conduct a deep-dive review into Amazon S3 storage services; practice advanced security setups including S3 Block Public Access and Object Ownership. | 26/05/2026 | 26/05/2026 | Amazon S3 Guide |
 | 3 | Participate in office group discussions; re-examine VPC subnetting theories, inbound/outbound traffic flows through Public/Private Subnets, and Security Groups configurations. | 27/05/2026 | 27/05/2026 | Amazon VPC Documentation |
 | 4 | Study theoretical implementations for distributing static frontends; explore how to combine Amazon S3 with Amazon CloudFront (CDN) to optimize page loading speeds. | 28/05/2026 | 28/05/2026 | AWS Web Hosting Blog |
-| 5 | Practice drafting the preliminary system architecture for the Pet Shop & Invoice project using Draw.io; compile documentation for the upcoming Proposal week. | 29/05/2026 | 29/05/2026 | |
+| 5 | Practice drafting the preliminary system architecture for the Pet Resort & Care project using Draw.io; compile documentation for the upcoming Proposal week. | 29/05/2026 | 29/05/2026 | |
 
 ### Week 6 Achievements:
 

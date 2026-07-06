@@ -1,27 +1,27 @@
 ---
-title: "Deploy Frontend with AWS Amplify"
+title: "Deploy Frontend with S3 & CloudFront"
 weight: 1
 chapter: false
 pre: " <b> 5.1 </b> "
 ---
 
-# Deploy ReactJS Frontend with AWS Amplify
+# Deploy ReactJS Frontend with S3 & CloudFront
 
 #### Overview
 
-In this workshop, you will learn how to deploy a ReactJS application for Coffee Cloud Platform to **AWS Amplify** with automatic CI/CD capabilities. AWS Amplify makes it easy to host static websites and automatically build + deploy every time you push code to your Git repository.
+In this workshop, you will learn how to deploy the ReactJS application for the **Pet Resort & Care System** using **Amazon S3** for static file hosting and **Amazon CloudFront** as a CDN for global content delivery. Optionally, **AWS WAF** is integrated for security protection.
 
-**AWS Amplify** is a fully-managed service that helps deploy and host frontend web applications with the following features:
-- 🚀 Automatic CI/CD pipeline from Git repository
-- 🔒 Built-in free SSL certificate
-- 🌍 Global CDN with high performance
-- 💰 Free tier: 1000 build minutes/month, 15GB storage
+This approach gives you full control over hosting and is highly cost-effective for static single-page applications:
+- 🚀 Static Website Hosting on Amazon S3
+- 🔒 HTTPS via CloudFront with free SSL certificate
+- 🌍 Global CDN for fast page load speeds
+- 💰 Extremely low cost (~$0/month within Free Tier limits)
 
 #### Architecture
 
 ```
-GitHub Repository → AWS Amplify → CloudFront CDN → Users
-     ↓ (push code)      ↓ (auto build)    ↓ (distribute)
+GitHub Repository → npm run build → S3 Bucket → CloudFront CDN → Users
+     ↓ (source code)    ↓ (static files)   ↓ (hosting)    ↓ (distribute)
 ```
 
 #### Contents
@@ -29,12 +29,11 @@ GitHub Repository → AWS Amplify → CloudFront CDN → Users
 1. [Workshop Overview](5.1.1-overview/)
 2. [Prerequisites](5.1.2-prerequisites/)
 3. [Setup Git Repository](5.1.3-setup-git/)
-4. [Deploy to AWS Amplify](5.1.4-deploy-frontend/)
-5. [Configure Build Settings](5.1.5-configure-build/)
-6. [Testing & Verification](5.1.6-testing/)
+4. [Deploy to S3 & CloudFront](5.1.4-deploy-frontend/)
+5. [Testing & Verification](5.1.5-testing/)
 
 #### Completion Time
-⏱️ Approximately **60-90 minutes**
+⏱️ Approximately **45-60 minutes**
 
 #### Requirements
 - ✅ AWS Account (Free Tier eligible)

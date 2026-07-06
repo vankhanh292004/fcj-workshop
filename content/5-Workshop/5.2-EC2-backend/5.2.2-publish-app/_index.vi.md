@@ -1,67 +1,63 @@
 ---
-title: "Publish Ứng dụng"
+title: "Đóng gói Ứng dụng"
 weight: 2
 chapter: false
 pre: " <b> 5.2.2 </b> "
 ---
 
-# Publish Ứng dụng .NET để Triển khai
+# Đóng gói Ứng dụng Spring Boot để Triển khai
 
-Trước khi triển khai lên Elastic Beanstalk, chúng ta cần publish ứng dụng .NET thành package triển khai.
+Trước khi đưa mã nguồn lên máy chủ Amazon EC2, chúng ta cần biên dịch (build) và đóng gói toàn bộ ứng dụng Java Spring Boot thành một file thực thi duy nhất (Executable JAR).
 
+#### Bước 1: Mở Terminal trong VS Code
 
-#### Bước 2: Publish lên AWS trên Visual Code Studio (Elastic Beanstalk)
+Mở project backend của bạn bằng **Visual Studio Code**. 
+Sử dụng tổ hợp phím `` Ctrl + ` `` (hoặc vào menu **Terminal** → **New Terminal**) để mở giao diện dòng lệnh tích hợp ngay bên trong VS Code.
 
-![Select GitHub](/images/5-Workshop/publish-be.png)
+Đảm bảo terminal đang trỏ đúng vào thư mục gốc của dự án (nơi chứa file `pom.xml`).
 
-Lệnh này tạo thư mục `publish` với tất cả files cần thiết.
+![Mở Terminal trong VS Code](/images/5-Workshop/build-backend-1.png)
 
-#### Bước 3: Tự động tạo file Zip và deploy
-![Select GitHub](/images/5-Workshop/auto-deploy.png)
+#### Bước 2: Build dự án bằng Maven
 
-Tạo file ZIP từ output đã publish
+Tại màn hình Terminal của VS Code, gõ lệnh sau để dọn dẹp các bản build cũ, biên dịch mã nguồn mới và đóng gói. Chúng ta sử dụng cờ `-DskipTests` để bỏ qua các bài test cục bộ, giúp quá trình build diễn ra nhanh chóng hơn:
 
-Cách thứ hai là dùng lệnh này để republish và rezip. Sau đó upload lên Elastic Beanstalk Console:
 ```bash
-dotnet publish -c Release -o ./publish
-# Copy Procfile vào thư mục publish
-Copy-Item Procfile .\publish\
-Compress-Archive -Path .\publish\* -DestinationPath CoffeeCloudAPI.zip -Force
+mvn clean package -DskipTests
 ```
+
+Sau khi nhấn Enter, Maven sẽ tải các thư viện cần thiết và tiến hành đóng gói. Khi bạn nhìn thấy dòng chữ **[INFO] BUILD SUCCESS** màu xanh lá, quá trình đã hoàn tất thành công!
+
+![Terminal Build Success trong VS Code](/images/5-Workshop/build-backend-2.png)
 
 #### Deployment Package Sẵn sàng! 📦
 
-Bây giờ bạn có:
-- ✅ `CoffeeShopAPI.zip` - Sẵn sàng upload lên Elastic Beanstalk
-- ✅ Swagger UI đã bật để testing
-- ✅ Tất cả dependencies đã bao gồm
-- ✅ Các file cấu hình phù hợp
+Lệnh trên đã tự động tạo ra một thư mục có tên là `target` nằm trong cây thư mục bên trái của VS Code. Trong hệ sinh thái Spring Boot, bạn chỉ cần quan tâm đến file quan trọng nhất:
+
+- ✅ `petshop-api-0.0.1-SNAPSHOT.jar` - File Fat JAR đã sẵn sàng để upload lên máy chủ EC2.
+- ✅ Tích hợp sẵn máy chủ Web (Embedded Tomcat).
+- ✅ Tất cả dependencies (thư viện) đã được bao gồm đầy đủ bên trong.
+- ✅ Cấu hình từ `application.properties` đã được ánh xạ chuẩn xác.
 
 **Vị trí File:**
 
-![Select GitHub](/images/5-Workshop/publish-file.png)
+![Thư mục Target trong VS Code](/images/5-Workshop/build-backend-3.png)
 
 #### Các Vấn đề Thường gặp
 
-**Vấn đề:** File ZIP quá lớn (>512 MB)
+**Vấn đề:** Báo lỗi `mvn: command not found`
 **Giải pháp:** 
-- Xóa các file không cần thiết khỏi thư mục publish
-- Kiểm tra các dependency bị trùng lặp
-- Dùng `dotnet publish --self-contained false`
+- Máy tính của bạn chưa cài đặt Maven hoặc chưa cấu hình biến môi trường (Environment Variables) cho Maven. Cần cài đặt và thêm đường dẫn thư mục `bin` của Maven vào biến `PATH`.
 
-**Vấn đề:** Swagger không hoạt động sau khi deploy
+**Vấn đề:** Ứng dụng báo lỗi thiếu phiên bản Java (ví dụ: cần Java 17)
 **Giải pháp:**
-- Đảm bảo `UseSwagger()` được gọi không có điều kiện môi trường
-- Xác minh `appsettings.json` có trong ZIP
-- Kiểm tra cài đặt HTTPS redirection
+- Kiểm tra lại phiên bản Java trong file `pom.xml`: `<java.version>17</java.version>`.
+- Đảm bảo môi trường EC2 trên AWS sắp tới cũng được cài đặt đúng Java 17.
 
-**Vấn đề:** Ứng dụng không khởi động
+**Vấn đề:** Lỗi kết nối Database khi chạy lệnh build
 **Giải pháp:**
-- Xác minh `web.config` có mặt
-- Kiểm tra phiên bản .NET khớp (8.0)
-- Xem CloudWatch logs sau khi deploy
+- Nếu bạn quên thêm cờ `-DskipTests`, Spring Boot sẽ cố kết nối với Database ở localhost để chạy Unit Test. Hãy chắc chắn bạn đã dùng cờ này trong lệnh build.
 
 #### Bước tiếp theo
 
-Bây giờ chúng ta đã có deployment package, hãy upload lên AWS Elastic Beanstalk! →
-
+Bây giờ chúng ta đã có file thực thi `.jar` hoàn chỉnh. Bước tiếp theo là cấu hình mạng, khởi tạo **[Amazon EC2 và chạy Server](../5.2.3-deploy-ec2/)**!

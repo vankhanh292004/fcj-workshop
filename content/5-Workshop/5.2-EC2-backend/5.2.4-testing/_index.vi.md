@@ -1,120 +1,80 @@
 ---
-title: "Kiểm tra với Swagger"
+title: "Kiểm tra và Tích hợp"
 weight: 4
 chapter: false
 pre: " <b> 5.2.4 </b> "
 ---
 
-# Kiểm tra API với Swagger UI
+# Kiểm tra API và Tích hợp Hệ thống
 
-Bây giờ hãy test API đã deploy sử dụng Swagger UI và kết nối với Amplify frontend.
+Bây giờ chúng ta sẽ kiểm thử backend Spring Boot vừa triển khai, xác minh kết nối cơ sở dữ liệu và tích hợp API với Frontend (ReactJS).
 
-#### Step 1: Access Swagger UI
+## Bước 1: Lấy URL của Application Load Balancer (ALB)
 
-Open your browser and navigate to:
-```
-http://fixenv-env.eba-vgperhwx.ap-southeast-1.elasticbeanstalk.com/swagger
-```
+1. Truy cập **AWS Console** → **EC2** → Chọn **Load Balancers** ở menu trái.
+2. Chọn ALB `petshop-alb` mà bạn đã tạo ở bài trước.
+3. Trong tab **Description**, copy đường dẫn ở mục **DNS name** (Ví dụ: `petshop-alb-123456789.ap-southeast-1.elb.amazonaws.com`).
 
-Replace with your actual Elastic Beanstalk domain.
+![ALB DNS Name](/images/5-Workshop/alb-dns.png)
 
-You should see the **Swagger UI** interface with all your API endpoints listed.
+## Bước 2: Kiểm tra API qua Swagger UI
 
-#### Step 8: Connect to Amplify Frontend with Cloudflare Tunnel
-
-Since Elastic Beanstalk gives you HTTP (not HTTPS), and Amplify requires HTTPS, we'll use **Cloudflare Tunnel** (Quick Tunnel).
-
-**Why Cloudflare Tunnel?**
-- ✅ Converts HTTP to HTTPS
-- ✅ Free and easy to use
-- ✅ No SSL certificate needed
-- ✅ Works with Amplify CORS
-
-**Install Cloudflare Tunnel:**
-
-**Windows:**
-```powershell
-PS C:\Users\hp> cd C:\Users\hp\Documents\GitHub\Coffe-shop-oder-platfrom
-PS C:\Users\hp\Documents\GitHub\Coffe-shop-oder-platfrom> .\quick-tunnel.ps1 
+Mở trình duyệt và truy cập vào đường dẫn Swagger mặc định của Spring Boot thông qua ALB:
+```text
+http://<DNS-name-của-ALB>/swagger-ui/index.html
 ```
 
-#### Step 9: Run Quick Tunnel
+Bạn sẽ thấy giao diện **Swagger UI** xuất hiện với đầy đủ các Endpoints của Pet Resort (như Products, Services, Bookings, Users). Thử thực thi (Execute) một API `GET /api/products` để đảm bảo API trả về mã `200 OK`.
 
-**Output will show:**
-![Select GitHub](/images/5-Workshop/eb-cloudflare.png)
+![Swagger UI Backend](/images/5-Workshop/swagger-ui.png)
 
-**Important:** Copy this HTTPS URL! This is your secure tunnel endpoint.
+## Bước 3: Xác minh kết nối Database & Cache
 
-**Keep this terminal running!** The tunnel only works while the command is active.
+Thay vì chỉ tin vào API, chúng ta sẽ kiểm tra trực tiếp xem dữ liệu đã thực sự được ghi vào **Amazon RDS (MySQL)** hay chưa.
 
-#### Step 11: Update Amplify Frontend Environment Configuration
+1. Vào AWS Console → **Systems Manager** → **Session Manager**.
+2. Start session để chui vào bên trong máy chủ EC2 `petshop-backend-server`.
+3. Dùng lệnh kết nối MySQL để kiểm tra các bảng dữ liệu đã được Hibernate/JPA tự động tạo ra.
 
-In your React frontend code, update the API base URL:
-
-![Select GitHub](/images/5-Workshop/environment-amplify.png)
-
-
-
-#### Step 12: Test Frontend Connection
-
-1. **Deploy updated frontend to Amplify**
-   ```bash
-   git add .
-   git commit -m "Add backend API integration"
-   git push origin main
-   ```
-
-2. **Wait for Amplify build** (2-3 minutes)
-
-3. **Test on Amplify domain:**
-   - Visit your Amplify app
-   - Open browser DevTools (F12)
-   - Go to Network tab
-   - Interact with menu/order features
-   - Should see API calls to Cloudflare tunnel URL
-   - Check for successful responses (200, 201)
-
-#### Step 13: Verify CORS
-
-If you see CORS errors in console:
-
-1. **Update backend CORS settings**
-```
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy("AllowAll", policy =>
-    {
-        policy.WithOrigins("http://localhost:3000",
-                "https://main.d3djm3hylbiyyu.amplifyapp.com",
-               "http://fixenv-env.eba-vgperhwx.ap-southeast-1.elasticbeanstalk.com")
-              .AllowAnyMethod()
-              .AllowAnyHeader()
-  .AllowCredentials();
-    });
-});
-```
-2. Redeploy to Elastic Beanstalk
-![Select GitHub](/images/5-Workshop/publish-be.png)
-3. Restart Cloudflare tunnel
-4. Test again
-
-**Check in DevTools Console:**
-```
-✅ Good: Response received successfully
-❌ Bad: CORS policy blocked the request
+```bash
+mysql -h petshop-database-1.xxxx.ap-southeast-1.rds.amazonaws.com -u admin -p
+SHOW DATABASES;
+USE petshop_db;
+SHOW TABLES;
 ```
 
-#### Monitoring and Debugging
+Kết quả trả về chính xác các bảng nghiệp vụ của hệ thống như `bookings`, `pets`, `spa_services` chứng tỏ kết nối từ EC2 đến RDS đã thành công mỹ mãn!
 
-**Check Logs:**
-1. Go to Elastic Beanstalk Console
-2. Environment → Logs → Request Logs
-3. Click "Last 100 Lines"
-4. Review for errors
+![Session Manager MySQL Verification](/images/5-Workshop/session-manager-db.jpg)
 
-**CloudWatch Logs:**
-1. CloudWatch Console
-2. Log Groups → `/aws/elasticbeanstalk/your-env`
-3. View detailed application logs
+## Bước 4: Tích hợp API vào Frontend (ReactJS)
 
+Bây giờ bạn cần cập nhật URL Backend mới cho Frontend.
 
+1. Mở mã nguồn ReactJS (Frontend) trên máy tính bằng VS Code.
+2. Mở file biến môi trường (ví dụ `.env` hoặc `.env.production`).
+3. Cập nhật đường dẫn `VITE_API_URL` trỏ về DNS Name của ALB:
+
+```env
+VITE_API_URL=http://petshop-alb-123456789.ap-southeast-1.elb.amazonaws.com/api
+```
+
+![Update React Environment](/images/5-Workshop/frontend-env.png)
+
+4. Lưu file, commit code và push lên GitHub để hệ thống CI/CD tự động deploy bản cập nhật lên S3/CloudFront.
+
+## Bước 5: Kiểm tra lỗi CORS & Mixed Content
+
+Mở trang web Frontend đang host trên CloudFront của bạn, nhấn `F12` mở tab **Network** và **Console** để theo dõi:
+
+- ✅ **Thành công (200 OK):** Dữ liệu sản phẩm, dịch vụ được load lên giao diện từ ALB.
+- ❌ **Lỗi CORS:** Backend chặn request do khác domain. Bạn cần vào lại code Spring Boot (class `CorsConfig`), thêm domain CloudFront vào danh sách `allowedOrigins` và deploy lại.
+- ❌ **Lỗi Mixed Content (HTTP/HTTPS):** Frontend chạy trên `HTTPS` nhưng ALB lại dùng `HTTP`. 
+  - **Cách khắc phục thực tế:** Cấu hình Listener `HTTPS (443)` cho ALB và đính kèm chứng chỉ SSL miễn phí từ AWS Certificate Manager (ACM). 
+
+## Giám sát Ứng dụng qua CloudWatch
+
+Nếu API không phản hồi, hãy đọc Logs:
+1. Vào **AWS Console** → **CloudWatch** → **Log groups**.
+2. Tìm Log Group của EC2 (nếu đã cài CloudWatch Agent) hoặc kết nối SSH vào EC2 đọc file `app.log`.
+3. Kiểm tra các lỗi liên quan đến OutOfMemory hoặc kết nối RDS/ElastiCache bị từ chối do Security Group.

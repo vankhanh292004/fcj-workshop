@@ -7,7 +7,7 @@ pre: " <b> 1.4. </b> "
 
 Mục tiêu tuần 4:
 - Tìm hiểu về hạ tầng mạng ảo cô lập (VPC) để làm môi trường triển khai hệ thống an toàn.
-- Khởi tạo cơ sở dữ liệu quan hệ Amazon RDS MySQL cho dự án Pet Shop & Invoice.
+- Khởi tạo cơ sở dữ liệu quan hệ Amazon RDS MySQL cho dự án Pet Resort & Care.
 - Thiết lập các nhóm bảo mật (Security Groups) ban đầu để bảo vệ dữ liệu.
 
 | Ngày | Nhiệm vụ | Ngày bắt đầu | Ngày kết thúc | Tài liệu tham khảo |

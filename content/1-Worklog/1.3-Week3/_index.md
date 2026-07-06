@@ -7,7 +7,7 @@ pre: " <b> 1.3. </b> "
 
 ### Week 3 Objectives:
 - Learn the mechanics of cloud object storage and static asset management.
-- Initialize a test storage environment for project assets (pet images, service invoices) for the Pet Shop application.
+- Initialize a test storage environment for project assets (pet images, service invoices) for the Pet Resort application.
 - Establish initial account monitoring and cost allocation alarms.
 
 ### Tasks carried out this week:

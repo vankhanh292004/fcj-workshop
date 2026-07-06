@@ -77,7 +77,9 @@ By maximizing the **AWS Free Tier**, the maintenance cost of this system for lea
 | **ElastiCache** | 750 hours/month (t2.micro) | ~$0/month |
 | **Load Balancer (ALB)** | No Free Tier | ~$16 - $20/month |
 
-**Total Estimated Cost:** Approximately **$15 - $25/month** (The cost is primarily for maintaining the Load Balancer and static IP. If you delete the Load Balancer when not in use, the cost is close to $0).
+**Total Estimated Cost (Practice):** Approximately **$15 - $25/month** (The cost is primarily for maintaining the Load Balancer. If you delete the Load Balancer when not in use, the cost is close to $0).
+
+> **Note:** The full Multi-AZ architecture described in the [Project Proposal](../2-Proposal/) costs approximately **~$168/month** due to 2 NAT Gateways, Multi-AZ RDS, and ElastiCache replicas. The workshop practice environment uses a simplified single-AZ setup to minimize costs.
 
 ---
 

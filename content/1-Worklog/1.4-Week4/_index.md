@@ -7,7 +7,7 @@ pre: " <b> 1.4. </b> "
 
 ### Week 4 Objectives:
 - Learn about isolated virtual networking (Amazon VPC) to build a secure deployment environment.
-- Initialize the Amazon RDS MySQL relational database for the Pet Shop & Invoice project.
+- Initialize the Amazon RDS MySQL relational database for the Pet Resort & Care project.
 - Establish initial firewall configurations (Security Groups) to safeguard data components.
 
 ### Tasks carried out this week:

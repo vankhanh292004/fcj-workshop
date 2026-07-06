@@ -70,7 +70,7 @@ Nhờ tận dụng khéo léo gói AWS Free Tier, chi phí duy trì hệ thống
 - ✅ **Database RDS:** Miễn phí 750 giờ/tháng (Free Tier).
 - ✅ **Lưu trữ S3 & CloudFront:** Nằm trong định mức miễn phí.
 
-**Chi phí ước tính thực tế:** Khoảng **$50 - $70/tháng**. Chi phí này chủ yếu để duy trì 2 dịch vụ mạng quan trọng là cổng NAT Gateway và Load Balancer nhằm đảm bảo chuẩn mô hình doanh nghiệp thực tế.
+**Chi phí ước tính thực tế:** Khoảng **$50 - $70/tháng** cho môi trường thực hành. Chi phí này chủ yếu để duy trì 2 dịch vụ mạng: NAT Gateway và Load Balancer. Kiến trúc Multi-AZ đầy đủ (như mô tả trong Proposal) có chi phí khoảng **~$168/tháng**.
 
 {{% notice tip %}}
 💡 **Mẹo:** Trong lúc thực hành, nếu chưa cần chạy thật, bạn có thể tạm thời tắt NAT Gateway và chạy Database ở chế độ máy đơn (Single-AZ) để tiết kiệm tối đa tiền trong thẻ.

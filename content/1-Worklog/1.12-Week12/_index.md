@@ -16,7 +16,7 @@ pre: " <b> 1.12. </b> "
 | Monday | - End-to-End Testing: Run smoke tests to verify purchasing flows, spa booking, payments, and connection stability from Frontend (CloudFront) to Backend (ALB). | 06/07/2026   | 06/07/2026      | Team's Test Case Scripts                  |
 | Tuesday | - Setup Monitoring & Alerting: Configure Amazon CloudWatch Dashboards and create SNS Alarms to send email alerts to Admins when EC2 CPU or RDS connections exceed 80%.                      | 07/07/2026   | 07/07/2026      | AWS Documentation (CloudWatch, SNS)       |
 | Wednesday | - Load Testing: Simulate sudden high traffic (e.g., Flash Sale) to verify the EC2 Auto Scaling mechanism and the caching efficiency of ElastiCache (Redis).                                 | 08/07/2026   | 08/07/2026      | Apache JMeter / Postman                   |
-| Thursday | - Resource Optimization (FinOps): Clean up temporary resources (test buckets, old snapshots, unattached Elastic IPs) to keep running costs under the budget limit (~$130/month).              | 09/07/2026   | 09/07/2026      | AWS Billing Console                       |
+| Thursday | - Resource Optimization (FinOps): Clean up temporary resources (test buckets, old snapshots, unattached Elastic IPs) to keep running costs under the budget limit (~$168/month).              | 09/07/2026   | 09/07/2026      | AWS Billing Console                       |
 | Friday | - Finalize Deliverables: Write the deployment README, finalize the Architecture Blueprint document, and prepare the Slide + Demo script for the final project defense.                        | 10/07/2026   | 10/07/2026      | Project Documentation                     |
 
 ### Achievements in Week 12:

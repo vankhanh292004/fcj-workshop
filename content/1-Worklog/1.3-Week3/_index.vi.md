@@ -7,7 +7,7 @@ pre: " <b> 1.3. </b> "
 
 Mục tiêu tuần 3:
 - Tìm hiểu cơ chế quản lý lưu trữ đối tượng và tài nguyên tĩnh trên đám mây.
-- Khởi tạo môi trường lưu trữ hình ảnh thử nghiệm phục vụ cho các tài nguyên (ảnh thú cưng, hóa đơn dịch vụ) của dự án Pet Shop.
+- Khởi tạo môi trường lưu trữ hình ảnh thử nghiệm phục vụ cho các tài nguyên (ảnh thú cưng, hóa đơn dịch vụ) của dự án Pet Resort.
 - Thiết lập các cơ chế giám sát tài khoản và cảnh báo chi phí ban đầu.
 
 | Ngày | Nhiệm vụ | Ngày bắt đầu | Ngày kết thúc | Tài liệu tham khảo |

@@ -15,7 +15,7 @@ Mục tiêu tuần 5:
 | 1 | Đọc tài liệu tổng quan về Amazon EC2: Tìm hiểu về vòng đời của một Instance (EC2 Lifecycle), các trạng thái hoạt động và cơ chế bảo mật khóa Key Pair. | 18/05/2026 | 18/05/2026 | Tài liệu Amazon EC2 |
 | 2 | Tìm hiểu khái niệm cơ bản về Serverless (kiến trúc phi máy chủ) và cách thức hoạt động dựa trên sự kiện của dịch vụ AWS Lambda. | 19/05/2026 | 19/05/2026 | Tài liệu AWS Lambda |
 | 3 | Thực hiện bài toán phân tích so sánh lý thuyết giữa EC2 và Lambda về mặt quản lý hạ tầng, cơ chế tự động co giãn (Scaling) và cách tính chi phí. | 20/05/2026 | 20/05/2026 | AWS Compute Blog |
-| 4 | Thảo luận tổng quan với nhóm về mô hình kiến trúc web: Đánh giá xem một ứng dụng Spring Boot (như dự án Pet Shop) sẽ phù hợp với EC2 truyền thống hay Serverless Lambda hơn. | 21/05/2026 | 21/05/2026 | |
+| 4 | Thảo luận tổng quan với nhóm về mô hình kiến trúc web: Đánh giá xem một ứng dụng Spring Boot (như dự án Pet Resort) sẽ phù hợp với EC2 truyền thống hay Serverless Lambda hơn. | 21/05/2026 | 21/05/2026 | |
 | 5 | Hệ thống hóa lại toàn bộ kiến thức lý thuyết đã tìm hiểu trong tuần và cập nhật tiến độ báo cáo vào hệ thống Hugo local. | 22/05/2026 | 22/05/2026 | |
 
 Thành tích tuần 5:
