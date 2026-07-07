@@ -41,7 +41,7 @@ The execution of the command automatically generates a folder named `target`, vi
 
 **File Location:**
 
-![Target folder in VS Code](/images/5-Workshop/build-backend-3.png)
+![Maven Build target Folder](/images/1-Worklog/maven_build_output.png)
 
 #### Common Issues
 

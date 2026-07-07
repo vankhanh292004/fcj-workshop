@@ -20,6 +20,8 @@ npm run build
 ```
 2. Once completed, a `build` (or `dist`) folder will be generated. This is the folder we will upload to AWS.
 
+![ReactJS Build Output](/images/1-Worklog/react_build_output.png)
+
 ---
 
 ## 2. Create and Configure Amazon S3 Bucket

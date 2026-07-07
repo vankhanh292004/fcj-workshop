@@ -13,7 +13,10 @@ Bây giờ chúng ta sẽ đưa file `.jar` đã build ở bước trước lên
 
 Để đảm bảo bảo mật, máy chủ EC2 backend (chứa logic và kết nối DB) sẽ được đặt trong **Private Subnet** (không có IP Public). Để EC2 có thể tải các gói cài đặt (như Java) từ Internet về, chúng ta cần cấu hình NAT Gateway ở Public Subnet.
 
-![NAT Gateway Configuration](/images/5-Workshop/nat-gateway.jpg)
+![VPC Resource Map](/images/1-Worklog/vpc_resource_map.png)
+
+Xác minh rằng NAT Gateway đã được khởi tạo thành công và liên kết với public subnet:
+![NAT Gateway Configuration](/images/1-Worklog/nat_gateway_pending.png)
 
 #### Bước 2: Khởi tạo EC2 Instance
 
@@ -21,10 +24,15 @@ Bây giờ chúng ta sẽ đưa file `.jar` đã build ở bước trước lên
 2. **Name:** `petshop-backend-server`
 3. **AMI (Hệ điều hành):** Chọn `Amazon Linux 2023` (hoặc Ubuntu).
 4. **Instance type:** Chọn `t3.micro` (Đủ điều kiện Free Tier).
-5. **Network settings:** 
-   - Chọn VPC `Pet-Shop-vpc`
-   - Chọn Private Subnet
-   - Security Group: Cho phép Inbound port `8080` (Cổng mặc định của Spring Boot) và port `22` (SSH).
+5. Network settings:
+    * Chọn VPC: `Pet-Shop-vpc`
+    * Chọn Subnet: **Private Subnet**
+    * Security Group: Chọn `SG_Backend` (Lưu ý: Inbound rules của SG này chỉ mở port `8080` cho phép luồng dữ liệu từ `SG_ALB` đi vào. Tuyệt đối không mở port 22, chúng ta sẽ quản trị server qua AWS Systems Manager).
+
+![Security Groups](/images/1-Worklog/security_groups.png)
+
+Đồng thời, tạo một KMS Customer Managed Key để mã hóa các thông số và bí mật của hệ thống:
+![KMS Key Creation](/images/1-Worklog/kms_key.png)
 
 Click **Launch instance** và đợi trạng thái chuyển sang `Running`.
 

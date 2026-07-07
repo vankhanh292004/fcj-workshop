@@ -20,6 +20,8 @@ npm run build
 ```
 2. Sau khi chạy xong, một thư mục `build` (hoặc `dist`) sẽ được tạo ra. Đây chính là thư mục chúng ta sẽ upload lên AWS.
 
+![Thành quả build ReactJS](/images/1-Worklog/react_build_output.png)
+
 ---
 
 ## 2. Tạo và cấu hình Amazon S3 Bucket

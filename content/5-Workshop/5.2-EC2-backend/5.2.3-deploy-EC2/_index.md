@@ -13,7 +13,10 @@ Now, we will deploy the `.jar` file built in the previous step onto an Amazon EC
 
 For security purposes, the backend EC2 server (hosting business logic and DB connections) is placed within a **Private Subnet** (without a Public IP). To allow the EC2 instance to download necessary packages (like Java) from the Internet, we must configure a NAT Gateway in the Public Subnet.
 
-![NAT Gateway Configuration](/images/5-Workshop/nat-gateway.jpg)
+![VPC Resource Map](/images/1-Worklog/vpc_resource_map.png)
+
+Verify that your NAT Gateway is successfully created and associated with the public subnet:
+![NAT Gateway Configuration](/images/1-Worklog/nat_gateway_pending.png)
 
 #### Step 2: Provision the EC2 Instance
 
@@ -25,6 +28,11 @@ For security purposes, the backend EC2 server (hosting business logic and DB con
    - Select VPC `Pet-Shop-vpc`
    - Select a Private Subnet
    - Security Group: Allow Inbound port `8080` (Spring Boot default port) and port `22` (SSH).
+
+![Security Groups](/images/1-Worklog/security_groups.png)
+
+Additionally, set up a KMS Customer Managed Key to encrypt database/backend parameters and secrets:
+![KMS Key Creation](/images/1-Worklog/kms_key.png)
 
 Click **Launch instance** and wait until the status changes to `Running`.
 

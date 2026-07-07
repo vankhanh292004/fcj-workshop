@@ -30,6 +30,21 @@ You should see the **Swagger UI** displaying all Pet Resort endpoints (Products,
 
 ## Step 3: Verify Database & Cache Connections
 
+During the setup of the **Amazon RDS (MySQL)** database, you will see the estimated cost summary:
+![RDS Database Estimated Costs](/images/1-Worklog/rds_estimated_costs.png)
+
+Once launched, verify that the database status changes to **Creating** and eventually **Available**:
+![RDS Instance Launching](/images/1-Worklog/rds_creating.png)
+
+Ensure the database settings are configured correctly, showing the connection details and private subnets:
+![RDS Connectivity Details](/images/1-Worklog/rds_connectivity.png)
+
+For cache acceleration, configure and review the **Amazon ElastiCache (Valkey)** settings:
+![ElastiCache Valkey Settings](/images/1-Worklog/elasticache_settings.png)
+
+Verify that the ElastiCache cluster is created successfully and reaches the available status:
+![ElastiCache Valkey Status](/images/1-Worklog/elasticache_creating.png)
+
 Instead of blindly trusting the API, we will manually verify if data schemas are correctly written to **Amazon RDS (MySQL)**.
 
 1. Go to AWS Console → **Systems Manager** → **Session Manager**.
@@ -44,8 +59,6 @@ SHOW TABLES;
 ```
 
 Seeing business tables like `bookings`, `pets`, and `spa_services` confirms that the connection between EC2 and RDS is highly successful!
-
-![Session Manager MySQL Verification](/images/5-Workshop/session-manager-db.jpg)
 
 ## Step 4: Integrate API into the Frontend (ReactJS)
 

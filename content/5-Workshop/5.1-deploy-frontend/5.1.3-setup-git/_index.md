@@ -22,7 +22,7 @@ If you want to create your own copy to practice the deployment process, follow t
 3. Click the **Fork** button (top right corner) to create a copy in your personal account.
 4. Ensure the **Visibility** of your new repository is set to your preference (**Public** or **Private**).
 
-![Fork GitHub Repo](/images/5-Workshop/setup-git.png)
+![GitHub Repository Structure](/images/1-Worklog/github_repository.png)
 
 ## 2. Clone the code to your Local Machine
 

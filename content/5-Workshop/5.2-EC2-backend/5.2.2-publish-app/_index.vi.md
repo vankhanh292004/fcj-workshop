@@ -41,7 +41,7 @@ Lệnh trên đã tự động tạo ra một thư mục có tên là `target` n
 
 **Vị trí File:**
 
-![Thư mục Target trong VS Code](/images/5-Workshop/build-backend-3.png)
+![Thư mục target chứa tệp JAR](/images/1-Worklog/maven_build_output.png)
 
 #### Các Vấn đề Thường gặp
 

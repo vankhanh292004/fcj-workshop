@@ -30,3 +30,20 @@ pre: " <b> 1.11. </b> "
 * Đưa thành công toàn bộ hệ thống *Pet Resort & Care System* từ môi trường Local lên hạ tầng AWS thực tế.
 * Hệ thống đã có thể truy cập mượt mà qua Internet bằng tên miền, các luồng gọi API từ Frontend xuống Backend và luồng truy xuất hình ảnh/media hoạt động trơn tru qua hệ thống CDN toàn cầu.
 * Áp dụng thành công các nguyên tắc bảo mật (Zero Trust): Hoàn toàn không mở cổng SSH (Port 22), ẩn Database vào Private Subnet và sử dụng Secrets Manager để bảo mật thông tin đăng nhập.
+
+#### C. Minh chứng triển khai (Deployment Evidence)
+
+* **Sơ đồ tài nguyên VPC (VPC Resource Map):** Trực quan hóa cấu trúc các subnet, route table và gateway phục vụ cho thiết lập sẵn sàng cao Multi-AZ.
+  ![VPC Resource Map](/images/1-Worklog/vpc_resource_map.png)
+
+* **Nhóm bảo mật (Security Groups):** Các quy tắc tường lửa được cấu hình chi tiết cho ALB, Backend, Database và Cache.
+  ![Security Groups](/images/1-Worklog/security_groups.png)
+
+* **Ước tính chi phí RDS Database:** Chi tiết bảng tính toán chi phí hàng tháng trong quá trình thiết lập RDS MySQL.
+  ![RDS Database Estimated Costs](/images/1-Worklog/rds_estimated_costs.png)
+
+* **Khởi tạo RDS MySQL Instance:** Tiến trình khởi chạy cơ sở dữ liệu `petshop-database-1` trên môi trường AWS Console.
+  ![RDS Instance Launching](/images/1-Worklog/rds_creating.png)
+
+* **Kết nối & Chi tiết RDS Database:** Thông số kỹ thuật của cơ sở dữ liệu, hiển thị Endpoint nội bộ và phân vùng hoạt động.
+  ![RDS Connectivity Details](/images/1-Worklog/rds_connectivity.png)

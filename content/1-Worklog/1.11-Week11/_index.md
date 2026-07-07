@@ -30,3 +30,20 @@ pre: " <b> 1.11. </b> "
 * Successfully migrated the entire *Pet Resort & Care System* from the Local environment to the actual AWS infrastructure.
 * The system is now accessible smoothly via the Internet using a custom domain. API calls from Frontend to Backend, as well as image/media retrieval flows, operate seamlessly through the global CDN.
 * Successfully applied Zero Trust security principles: Completely disabled SSH port (Port 22), isolated the Database within the Private Subnet, and securely managed credentials using AWS Secrets Manager.
+
+#### C. Deployment Evidence
+
+* **VPC Resource Map:** Visualizing the subnet structure, route tables, and gateways for the Multi-AZ setup.
+  ![VPC Resource Map](/images/1-Worklog/vpc_resource_map.png)
+
+* **Security Groups:** Structured firewall rules configured for ALB, Backend, Database, and Cache.
+  ![Security Groups](/images/1-Worklog/security_groups.png)
+
+* **RDS Database Initialization & Pricing:** Database estimated monthly cost details during RDS MySQL configuration.
+  ![RDS Database Estimated Costs](/images/1-Worklog/rds_estimated_costs.png)
+
+* **RDS MySQL Instance Launch:** The `petshop-database-1` instance in `Creating` status.
+  ![RDS Instance Launching](/images/1-Worklog/rds_creating.png)
+
+* **RDS Connectivity & Details:** Database specifications showing its private endpoint and Multi-AZ ready placement.
+  ![RDS Connectivity Details](/images/1-Worklog/rds_connectivity.png)

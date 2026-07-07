@@ -22,7 +22,7 @@ Nếu bạn muốn tạo một bản sao để tự thực hành triển khai, h
 3. Click vào nút **Fork** (góc phải trên cùng) để tạo một bản sao về tài khoản cá nhân của bạn.
 4. Đảm bảo **Visibility** của repository đang để là **Public** hoặc **Private** tùy nhu cầu của bạn.
 
-![Fork GitHub Repo](/images/5-Workshop/setup-git.png)
+![Cấu trúc Repository trên GitHub](/images/1-Worklog/github_repository.png)
 
 ## 2. Clone code về máy tính (Local)
 
