@@ -23,10 +23,10 @@ Worklog này ghi lại hành trình thực tập 12 tuần tại **AWS First Clo
 
 **Tuần 8:** [Đóng gói Spring Boot (.jar), đánh giá Beanstalk vs EC2](1.8-week8/)
 
-**Tuần 9:** [Bảo mật code, CloudWatch monitoring & xử lý lỗi](1.9-week9/)
+**Tuần 9:** [Khởi tạo S3 Bucket, bảo mật mã nguồn & xử lý lỗi](1.9-week9/)
 
-**Tuần 10:** [Hoàn thiện sơ đồ kiến trúc & review cộng đồng](1.10-week10/)
+**Tuần 10:** [Cấu hình CloudFront, hoàn thiện sơ đồ kiến trúc & review cộng đồng](1.10-Week10/)
 
-**Tuần 11:** [Chốt kiến trúc & triển khai toàn bộ lên cloud](1.11-week11/)
+**Tuần 11:** [CloudFormation (IaC), chốt kiến trúc & triển khai lên cloud](1.11-week11/)
 
 **Tuần 12:** [Load testing, giám sát, FinOps & tổng kết dự án](1.12-week12/)
