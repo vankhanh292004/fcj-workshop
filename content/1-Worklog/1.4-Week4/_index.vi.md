@@ -5,23 +5,23 @@ chapter: false
 pre: " <b> 1.4. </b> "
 ---
 
-Mục tiêu tuần 4:
-- Tìm hiểu về hạ tầng mạng ảo cô lập (VPC) để làm môi trường triển khai hệ thống an toàn.
-- Khởi tạo cơ sở dữ liệu quan hệ Amazon RDS MySQL cho dự án Pet Resort & Care.
-- Thiết lập các nhóm bảo mật (Security Groups) ban đầu để bảo vệ dữ liệu.
+Mục tiêu trọng tâm của Tuần 4:
+- Nghiên cứu hạ tầng mạng riêng ảo (VPC) nhằm xây dựng môi trường triển khai an toàn và biệt lập cho hệ thống.
+- Triển khai cơ sở dữ liệu quan hệ Amazon RDS (động cơ MySQL) phục vụ cho dự án Pet Resort & Care.
+- Cấu hình các nhóm bảo mật (Security Groups) nền tảng nhằm thiết lập lớp tường lửa bảo vệ dữ liệu.
 
 | Ngày | Nhiệm vụ | Ngày bắt đầu | Ngày kết thúc | Tài liệu tham khảo |
 |------|----------|--------------|---------------|-------------------|
-| 1 | Tìm hiểu khái niệm cơ bản về Amazon VPC, cách phân chia Public Subnet (đón khách) và Private Subnet (giấu Database). | 11/05/2026 | 11/05/2026 | Tài liệu Amazon VPC |
-| 2 | Nghiên cứu về dịch vụ cơ sở dữ liệu quan hệ Amazon RDS, so sánh ưu điểm giữa tự cài MySQL trên EC2 và dùng RDS quản lý sẵn. | 12/05/2026 | 12/05/2026 | Tài liệu Amazon RDS |
-| 3 | Thực hành khởi tạo một cơ sở dữ liệu Amazon RDS MySQL (lựa chọn cấu hình Single-AZ Free Tier để tối ưu chi phí thực tập). | 13/05/2026 | 13/05/2026 | AWS RDS Console |
-| 4 | Cấu hình Security Group cho Database: Chỉ cho phép các dải IP nội bộ hoặc máy chủ được chỉ định truy cập, chặn hoàn toàn Internet bên ngoài. | 14/05/2026 | 14/05/2026 | AWS Security Best Practices |
-| 5 | Kiểm tra thông tin kết nối (Endpoint URL) của Database; chuẩn bị cấu hình các bảng dữ liệu mẫu (User, Pet, Order) cho backend. | 15/05/2026 | 15/05/2026 | |
+| 1 | Nghiên cứu các khái niệm nền tảng về Amazon VPC, nguyên lý quy hoạch mạng thành Public Subnet (tiếp nhận traffic từ bên ngoài) và Private Subnet (ẩn giấu Database). | 11/05/2026 | 11/05/2026 | Tài liệu Amazon VPC |
+| 2 | Tìm hiểu dịch vụ cơ sở dữ liệu Amazon RDS, tiến hành đánh giá ưu điểm của việc sử dụng RDS quản lý sẵn (Managed Service) so với tự vận hành MySQL trên EC2. | 12/05/2026 | 12/05/2026 | Tài liệu Amazon RDS |
+| 3 | Tiến hành khởi tạo instance cơ sở dữ liệu Amazon RDS MySQL (áp dụng cấu hình Single-AZ thuộc gói Free Tier nhằm tối ưu hóa ngân sách thực tập). | 13/05/2026 | 13/05/2026 | AWS RDS Console |
+| 4 | Thiết lập Security Group cho Database: Giới hạn quyền truy cập chỉ từ các dải IP nội bộ hoặc máy chủ được ủy quyền, ngăn chặn triệt để mọi kết nối trực tiếp từ Internet. | 14/05/2026 | 14/05/2026 | AWS Security Best Practices |
+| 5 | Xác thực thông tin kết nối (Endpoint URL) của Database; chuẩn bị cấu trúc các bảng dữ liệu cốt lõi (User, Pet, Order) để sẵn sàng tích hợp với backend. | 15/05/2026 | 15/05/2026 | |
 
-Thành tích tuần 4:
+Kết quả đạt được trong Tuần 4:
 
-• Nắm vững tư duy thiết kế mạng an toàn trên Cloud thông qua mô hình VPC và phân tách Subnet bảo mật.
+• Hoàn thiện tư duy quy hoạch và thiết kế kiến trúc mạng an toàn trên môi trường Cloud dựa vào mô hình VPC và chiến lược phân chia Subnet chặt chẽ.
 
-• Khởi tạo thành công máy chủ Database MySQL trên nền tảng Amazon RDS ở chế độ Single-AZ để tiết kiệm ngân sách credit.
+• Khởi chạy thành công hệ quản trị cơ sở dữ liệu MySQL trên nền tảng Amazon RDS (chế độ Single-AZ), đảm bảo đáp ứng yêu cầu kỹ thuật đồng thời tiết kiệm tối đa credit.
 
-• Thiết lập thành công lớp tường lửa Security Group cơ bản để bảo vệ Database khỏi các truy cập trái phép từ Internet.
+• Áp dụng thành công lớp tường lửa bằng Security Group, tạo màng chắn vững chắc bảo vệ Database instance khỏi các nguy cơ truy cập trái phép từ bên ngoài mạng lưới.
