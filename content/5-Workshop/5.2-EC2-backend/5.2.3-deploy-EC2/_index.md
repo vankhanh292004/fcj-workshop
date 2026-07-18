@@ -123,6 +123,38 @@ public class CorsConfig implements WebMvcConfigurer {
 ```
 *(If updated, you must rebuild the `.jar` file and redeploy it).*
 
+#### Step 9: Configure Launch Template & Auto Scaling Group for Backend (High Availability)
+
+To ensure the system runs stably at scale, automatically recovers from server failures, and balances traffic across Private Subnets, we create a machine image (AMI) from the EC2 Backend instance, then create a Launch Template and configure an Auto Scaling Group.
+
+1. **Create an Amazon Machine Image (AMI) from EC2 Backend:**
+   - Go to **EC2 Console** → Select **Instances** → Select your `petshop-backend-server` instance.
+   - Click **Actions** → **Image and templates** → **Create image**.
+   - **Image name**: `pet-shop-backend-AMI`.
+   - Click **Create image**. The status will become `Available` after the image creation completes.
+   
+   ![Create Amazon Machine Image](/images/5-Workshop/backend-ami.png)
+
+2. **Create a Launch Template:**
+   - Go to **EC2 Console** → Select **Launch Templates** in the left menu → Click **Create launch template**.
+   - **Launch template name**: `petshop-launch-template`.
+   - **Application and OS Images (Amazon Machine Image)**: Under the **My AMIs** tab, select the `pet-shop-backend-AMI` you created.
+   - Select the Instance type (`t3.micro`), Key pair, and Security Group `SG_Backend` exactly as configured manually in Step 2.
+   - Click **Create launch template**.
+   
+   ![Launch Template Configuration](/images/5-Workshop/launch-template.png)
+
+3. **Configure the Auto Scaling Group (ASG):**
+   - Go to **EC2 Console** → Select **Auto Scaling Groups** in the left menu → Click **Create Auto Scaling group**.
+   - **Auto Scaling group name**: `petshop-backend-autoscaling`.
+   - **Launch template**: Select the `petshop-launch-template` you just created.
+   - **Network**: Choose VPC `Pet-Shop-vpc` and select **only Private Subnets** (Private Subnet 1 & Private Subnet 2) to ensure the servers remain inaccessible directly from the Internet.
+   - **Load balancing**: Integrate with the existing Load Balancer, and select the Target Group `ALB-target-group` to automatically register newly launched instances.
+   - **Group size**: Set the capacity with **Desired capacity: 2**, **Minimum capacity: 2**, and **Maximum capacity: 4** to ensure at least 2 servers are running in parallel at all times.
+   - Complete the remaining steps and click **Create Auto Scaling group**.
+
+   ![Auto Scaling Group Configuration](/images/5-Workshop/auto-scaling.png)
+
 #### Common Issues
 
 **Issue: API Timeout (504 Gateway Time-out)**

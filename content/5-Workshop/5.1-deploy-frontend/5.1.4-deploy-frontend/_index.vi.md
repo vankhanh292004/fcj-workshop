@@ -67,6 +67,9 @@ npm run build
 
 ![Tạo CloudFront Distribution](/images/5-Workshop/cloudfront-create.png)
 
+Sau khi kích hoạt WAF, hệ thống tự động thiết lập một **Web ACL** bảo vệ để kiểm soát lưu lượng truy cập:
+![Danh sách Web ACLs của WAF](/images/5-Workshop/waf-web-acl.png)
+
 ### 3.2 Lấy URL truy cập
 Sau khoảng 3-5 phút, CloudFront sẽ deploy xong. 
 Bạn copy đường dẫn tại cột **Distribution domain name** (Ví dụ: `d3uvhesft661gl.cloudfront.net`) và truy cập trên trình duyệt để kiểm tra web. Bạn cũng có thể truy cập các đường dẫn cụ thể để kiểm tra trang con (Ví dụ: `https://d3uvhesft661gl.cloudfront.net/services/tam-spa-thu-cung`).

@@ -123,6 +123,38 @@ public class CorsConfig implements WebMvcConfigurer {
 ```
 *(Nếu cập nhật, bạn cần build lại file `.jar` và deploy lại).*
 
+#### Bước 9: Thiết lập Launch Template & Auto Scaling Group cho Backend (Tối ưu hóa khả dụng)
+
+Để hệ thống hoạt động ổn định ở quy mô lớn, tự động phục hồi khi máy chủ gặp sự cố và phân phối tải đều giữa các Private Subnets, chúng ta tạo bản sao hình ảnh máy ảo (AMI) từ EC2 Backend hiện tại, sau đó tạo Launch Template và thiết lập Auto Scaling Group.
+
+1. **Tạo Amazon Machine Image (AMI) từ EC2 Backend:**
+   - Vào **EC2 Console** → Chọn **Instances** → Tích chọn instance `petshop-backend-server`.
+   - Chọn **Actions** → **Image and templates** → **Create image**.
+   - **Image name**: `pet-shop-backend-AMI`.
+   - Click **Create image**. Trạng thái của AMI sẽ chuyển sang `Available` sau khi quá trình tạo hoàn tất.
+   
+   ![Tạo Amazon Machine Image](/images/5-Workshop/backend-ami.png)
+
+2. **Tạo Launch Template (Bản mẫu cấu hình khởi chạy):**
+   - Vào **EC2 Console** → Chọn **Launch Templates** ở menu trái → Click **Create launch template**.
+   - **Launch template name**: `petshop-launch-template`.
+   - **Application and OS Images (Amazon Machine Image)**: Ở mục **My AMIs**, chọn `pet-shop-backend-AMI` vừa tạo ở trên.
+   - Chọn Instance type (`t3.micro`), Key pair, và Security Group `SG_Backend` giống như đã thiết lập thủ công ở Bước 2.
+   - Nhấp **Create launch template**.
+   
+   ![Cấu hình Launch Template](/images/5-Workshop/launch-template.png)
+
+3. **Cấu hình Auto Scaling Group (ASG):**
+   - Vào **EC2 Console** → Chọn **Auto Scaling Groups** ở menu trái → Click **Create Auto Scaling group**.
+   - **Auto Scaling group name**: `petshop-backend-autoscaling`.
+   - **Launch template**: Chọn `petshop-launch-template` vừa tạo.
+   - **Network**: Chọn VPC `Pet-Shop-vpc` và chỉ chọn các **Private Subnets** (Private Subnet 1 & Private Subnet 2) để đảm bảo máy chủ không bị lộ ra ngoài Internet.
+   - **Load balancing**: Tích hợp với Load Balancer hiện tại, chọn Target Group `ALB-target-group` để tự động đăng ký các instance mới tạo.
+   - **Group size (Kích thước nhóm)**: Cấu hình tải cơ bản với **Desired capacity: 2**, **Minimum capacity: 2**, và **Maximum capacity: 4** nhằm đảm bảo luôn duy trì tối thiểu 2 máy chủ chạy song song.
+   - Hoàn tất các bước và chọn **Create Auto Scaling group**.
+
+   ![Cấu hình Auto Scaling Group](/images/5-Workshop/auto-scaling.png)
+
 #### Các Vấn đề Thường gặp
 
 **Vấn đề: API bị Timeout (504 Gateway Time-out)**

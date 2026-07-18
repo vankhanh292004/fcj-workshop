@@ -67,6 +67,9 @@ To make the web application faster and more secure, we place CloudFront in front
 
 ![Create CloudFront Distribution](/images/5-Workshop/cloudfront-create.png)
 
+Once WAF is enabled, a **Web ACL** is automatically created to monitor and secure your CloudFront distribution traffic:
+![WAF Web ACL List](/images/5-Workshop/waf-web-acl.png)
+
 ### 3.2 Get the Access URL
 After 3-5 minutes, CloudFront will finish deploying.
 Copy the URL under **Distribution domain name** (e.g., `d3uvhesft661gl.cloudfront.net`) and paste it into your browser to test the website. You can also append specific routes to test sub-pages (e.g., `https://d3uvhesft661gl.cloudfront.net/services/tam-spa-thu-cung`).
