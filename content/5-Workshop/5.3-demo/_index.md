@@ -15,7 +15,7 @@ Welcome to the final part of the Workshop series. Here, you will find the video 
 
 Below is the Google Drive link to the video demonstrating the **Pet Resort & Care System** fully deployed and functional on the AWS Cloud:
 
-* 🔗 **[Watch the Video Demo on Google Drive](https://drive.google.com/file/d/16RRpEKnxtZNp3DQF95Q_cZ5V83iaW-_r/view?usp=drivesdk)**
+* 🔗 **[Watch the Video Demo on Google Drive](https://drive.google.com/file/d/1vdlctZ3wXk-6QH55VSvH0enUMf32bonM/view?usp=drivesdk)**
 
 ---
 

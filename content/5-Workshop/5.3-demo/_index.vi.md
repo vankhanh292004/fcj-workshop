@@ -15,7 +15,7 @@ Chào mừng bạn đến với phần cuối cùng của chuỗi Workshop. Tạ
 
 Dưới đây là liên kết video demo minh chứng hoạt động của dự án **Pet Resort & Care System** sau khi được deploy hoàn tất lên nền tảng AWS:
 
-* 🔗 **[Xem Video Demo tại Google Drive](https://drive.google.com/file/d/16RRpEKnxtZNp3DQF95Q_cZ5V83iaW-_r/view?usp=drivesdk)**
+* 🔗 **[Xem Video Demo tại Google Drive](https://drive.google.com/file/d/1vdlctZ3wXk-6QH55VSvH0enUMf32bonM/view?usp=drivesdk)**
 
 ---
 
