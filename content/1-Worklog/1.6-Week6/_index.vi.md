@@ -5,23 +5,23 @@ chapter: false
 pre: " <b> 1.6. </b> "
 ---
 
-Mục tiêu tuần 6:
-- Lên văn phòng tham gia các buổi tự học, trao đổi trực tiếp với các thành viên để giải quyết các thắc mắc về hạ tầng đám mây.
-- Ôn tập và củng cố lại các kiến thức cốt lõi đã học trong các tuần qua (IAM, S3, VPC, EC2).
-- Nghiên cứu lý thuyết về phương pháp tối ưu hóa việc lưu trữ và phân phối giao diện tĩnh (Static Website Hosting).
+### Mục tiêu trọng tâm
+- Phân phối nội dung tĩnh toàn cầu với độ trễ thấp thông qua mạng lưới CDN Amazon CloudFront.
+- Đóng quyền truy cập trực tiếp từ Internet vào S3 Frontend, chỉ cho phép đi qua CloudFront bằng Origin Access Control (OAC).
+- Cấu hình lá chắn bảo mật AWS WAF để phát hiện và ngăn chặn các cuộc tấn công mạng nguy hiểm (SQL Injection, XSS, v.v.).
+
+### Bảng nhật ký công việc
 
 | Ngày | Nhiệm vụ | Ngày bắt đầu | Ngày kết thúc | Tài liệu tham khảo |
 |------|----------|--------------|---------------|-------------------|
-| 1 | Lên văn phòng tự học, hệ thống hóa lại các thiết lập bảo mật tài khoản; kiểm tra cấu hình MFA và các chính sách phân quyền IAM User đã tạo. | 25/05/2026 | 25/05/2026 | AWS IAM Documentation |
-| 2 | Ôn tập chuyên sâu về dịch vụ lưu trữ Amazon S3, làm rõ cơ chế quản lý vòng đời đối tượng (Lifecycle Policies) và bảo mật Bucket. | 26/05/2026 | 26/05/2026 | Amazon S3 Guide |
-| 3 | Thảo luận nhóm tại văn phòng về mô hình VPC; rà soát lại lý thuyết phân chia Subnet và cách thức hoạt động của các quy tắc tường lửa (Security Groups). | 27/05/2026 | 27/05/2026 | |
-| 4 | Tìm hiểu các giải pháp phân phối giao diện Frontend tĩnh: Đọc tài liệu so sánh giữa việc dùng Amazon S3 Static Hosting thông thường và tích hợp AWS Amplify. | 28/05/2026 | 28/05/2026 | AWS Web Hosting Blog |
-| 5 | Tổng hợp các nội dung tự học trong tuần, chuẩn bị các câu hỏi kỹ thuật cần Mentor hỗ trợ và cập nhật tiến độ báo cáo local. | 29/05/2026 | 29/05/2026 | |
+| 1 | Tìm hiểu nguyên lý hoạt động của CDN CloudFront, khái niệm Edge Location, TTL và Origin. | 22/05/2026 | 22/05/2026 | [Amazon CloudFront Docs](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html) |
+| 2 | Tạo CloudFront Distribution, trỏ Origin về S3 Bucket chứa Frontend ReactJS của dự án. | 23/05/2026 | 23/05/2026 | |
+| 3 | Cấu hình Origin Access Control (OAC) và cập nhật lại S3 Bucket Policy để chỉ cho phép lưu lượng đến từ CloudFront. | 25/05/2026 | 25/05/2026 | |
+| 4 | Cài đặt Error Pages trên CloudFront để xử lý các yêu cầu trang SPA (chuyển hướng lỗi 403/404 về `index.html` với mã 200). | 26/05/2026 | 26/05/2026 | |
+| 5 | Nghiên cứu AWS WAF (Web Application Firewall) và tạo một Web ACL cơ bản. | 27/05/2026 | 27/05/2026 | [AWS WAF Docs](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html) |
+| 6 | Đính kèm Web ACL chứa các bộ quy tắc chuẩn của AWS (AWS Managed Rules) vào CloudFront Distribution và xác minh hoạt động. | 28/05/2026 | 28/05/2026 | |
 
-Thành tích tuần 6:
-
-• Hoàn thành việc hệ thống hóa và nắm vững toàn bộ kiến thức nền tảng về nhóm dịch vụ Core (Tính toán, Mạng, Lưu trữ, Bảo mật) của AWS.
-
-• Làm rõ được định hướng triển khai phần giao diện (Frontend ReactJS): Quyết định nghiên cứu sâu giải pháp lưu trữ tĩnh trên Amazon S3 kết hợp CDN để tối ưu chi phí thay vì lạm dụng các dịch vụ tự động hóa đắt đỏ.
-
-• Tăng cường khả năng làm việc độc lập thông qua chuỗi ngày tự học tại văn phòng và phối hợp nhịp nhàng với tiến độ chung của nhóm.
+### Kết quả đạt được
+- Tăng tốc độ tải trang giao diện đáng kể bằng việc lưu đệm (cache) tài nguyên ở các Edge Location toàn cầu qua CloudFront.
+- Khóa hoàn toàn quyền truy cập trực tiếp S3 bucket Frontend từ bên ngoài, chỉ cho phép kết nối hợp lệ đi qua CloudFront.
+- Áp dụng thành công lá chắn AWS WAF để bảo vệ lớp giao diện người dùng trước các rủi ro tấn công mạng phổ biến.

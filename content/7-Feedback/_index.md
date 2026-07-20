@@ -11,52 +11,52 @@ pre: "  7.  "
 
 **1. Working Environment**  
 
-The working environment at FCJ is highly open, professional, and dynamic. The workspace is scientifically organized, creating ideal conditions for maximum concentration. What I appreciate the most is the friendliness of the team members, who are always ready to support each other even outside of official working hours. To foster stronger connections, the program might consider organizing periodic social gatherings or team-building activities.  
+The working environment at FCJ is highly dynamic, open, and professional. Every intern's input is valued and respected. Being provided with a workspace that stimulates creative thinking allowed our team to coordinate very effectively. To foster stronger connections, the program might consider organizing periodic cross-group sessions for interns to share system operation experiences.  
 
 **2. Support from Mentor / Team Admin**  
 
-The companionship of the Mentors and Team Admin is a major highlight of the program. Administrative procedures and documents are always thoughtfully prepared by the Admin to ensure smooth operations. As for the Mentors, they not only provide dedicated guidance but also use an excellent training methodology: encouraging critical thinking, letting interns research, debug, and propose solutions themselves rather than just giving ready-made answers.  
+The companionship of our Mentors and Admin was our strongest pillar throughout the internship. The Admins prepared administrative workflows very thoroughly. The Mentors employed an excellent guidance method: instead of pointing out exact errors when we misconfigured Route Tables, Security Groups, or RDS Multi-AZ, they showed us how to read CloudWatch logs and analyze errors, encouraging us to solve problems independently. This developed real-world troubleshooting skills for a systems engineer.  
 
 **3. Relevance of Work to Academic Major**  
 
-The Software Engineering knowledge I gained at university has been greatly reinforced and expanded during this internship. The tasks helped me step out of my coding comfort zone, giving me a more comprehensive view of the product development lifecycle, especially in deployment and system operations.
+The internship was highly relevant and greatly reinforced my academic studies. Stepping out of my local code environment, I had the opportunity to design a core VPC network topology, configure NAT Gateways, set up Application Load Balancers, and define Auto Scaling rules. This helped me deeply understand the production operations of a resilient 3-Tier architecture on the Cloud.  
 
 **4. Learning & Skill Development Opportunities**  
 
-The experience at FCJ provides a perfect environment to develop both hard and soft skills. I became more familiar with project management tools, improved my teamwork skills, and learned professional communication in a corporate environment. The real-world experiences shared by senior colleagues have helped me better shape my upcoming career path.
+I acquired substantial practical knowledge regarding AWS infrastructure design, from IAM configuration and S3 storage optimization to CloudFront CDN acceleration and AWS WAF protection. Alongside technical skills, our ability to collaborate, solve routing conflicts, and optimize cloud expenditures (FinOps) via VPC Endpoints grew significantly.  
 
 **5. Company Culture & Team Spirit**  
 
-I am truly impressed by the respectful and equal working culture here. Everyone works with a high sense of responsibility while keeping the atmosphere cheerful. During periods when project progress needs to be accelerated, the entire team stands shoulder-to-shoulder, providing cross-support regardless of position or rank. This made me, as an intern, feel like a true piece of the puzzle.
+The respectful and equal company culture here is outstanding. Team spirit was most evident during critical phases, such as integrating the 3-Tier stack and performing Load Testing. The group collaborated seamlessly to debug DB connection issues and resolve logic bottlenecks, ensuring smooth application startup.  
 
 **6. Internship Policies / Benefits**  
 
-The company provides a reasonable allowance and especially flexible working hours, helping final-year students easily balance their study and work schedules. Furthermore, the internal training sessions bring extremely valuable and practical knowledge.
+The company provides a reasonable allowance and flexible working hours, helping final-year students easily balance academic requirements and work schedules. The internal technical sharing sessions offered highly valuable guidance for my future career choices.  
 
 ### Additional Questions
 
 **What did you find most satisfying during your internship?**  
 
-The most wonderful experience was getting 100% hands-on experience in a real AWS environment. Designing and configuring the entire infrastructure from VPC, EC2 Auto Scaling, RDS Multi-AZ to deploying optimized solutions like S3 Gateway Endpoint gave me a great sense of achievement. In addition, the "independent problem-solving" mindset guided by my Mentors helped me mature significantly.
+I felt proud designing and operating the entire Pet Resort infrastructure on the Cloud from scratch. Directly configuring IAM security, optimizing data transfer costs with S3 Gateway Endpoint, and watching the system auto-scale during load testing provided invaluable practical experience that textbooks cannot replicate.  
 
 **What do you think the company should improve for future interns?**  
 
-The program could add short Mini-Workshops in the first few weeks focusing on setting up basic CI/CD (e.g., GitHub Actions) or guiding how to read and manage centralized logs (like CloudWatch Logs). Equipped with these tools early on, students will waste less time figuring things out when they start deploying their projects to the Cloud.
+The program could introduce short technical workshops focusing on CI/CD pipelines (e.g., GitHub Actions) or hands-on practice in centralized logging using CloudWatch during the early weeks so that interns can deploy their systems more easily.  
 
 **If recommending to a friend, would you suggest they intern here? Why or why not?**  
 
-Absolutely. This is a highly necessary and invaluable practical boost for any IT student aiming to pursue Cloud/DevOps. The program has significantly bridged the gap between academic theories and strict enterprise operation procedures.
+Absolutely. This is an ideal springboard for any technology student wishing to pursue Cloud/DevOps. The internship helps build a professional system architect mindset aligned with corporate standards.  
 
 ### Suggestions & Expectations
 
 **Suggestions to improve the experience:**  
 
-There should be more cross-sharing sessions or direct social networking between internship groups. This would serve as an open space for teams to share interesting infrastructure troubleshooting case studies they encountered, enabling more effective peer learning.
+Introduce cross-group sharing sessions to exchange real-world infrastructure troubleshooting lessons learned by each team during project implementation.  
 
 **Expectations for the future:**  
 
-I highly hope to have the opportunity to continue accompanying and committing to the First Cloud Journey program in future roles, continuing to learn deeply to work towards becoming a professional Cloud Engineer.
+I hope to continue building my Cloud expertise to become a professional Cloud Solutions Architect and work on larger-scale AWS projects in the future.  
 
 **Other comments (free sharing):**  
 
-I would like to send my sincerest and deepest gratitude to the program organizers and the Mentors. Thank you for your patience, dedication, and valuable time spent guiding and helping our team successfully complete this project. I wish the program and the company continued growth and success.
+I would like to send my deepest appreciation to the program organizers and our Mentors for their dedication and patience in guiding our team to successfully complete this project. I wish the program and the company continued growth and success!

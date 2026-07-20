@@ -5,29 +5,31 @@ chapter: false
 pre: " <b> 1. </b> "
 ---
 
-This worklog documents a 12-week internship journey at **AWS First Cloud Journey** (April - July 2026). Throughout this period, our team built and deployed the **Pet Resort & Care System** — a web application combining pet e-commerce and spa booking — onto the AWS Cloud platform.
+This worklog documents a 13-week internship journey at **AWS First Cloud Journey** (from April 17, 2026 to July 20, 2026). Throughout this period, our team built and deployed the **Pet Resort & Care System** — a pet care management and booking application — onto the AWS Cloud platform, viewed from the perspective of system infrastructure design, construction, and operation.
 
-**Week 1:** [First steps on AWS, cloud account creation & configuring Hugo website](1.1-week1/)
+**Week 1:** [Project kickoff, AWS Console overview & cloud resources requirement analysis](1.1-week1/)
 
-**Week 2:** [Analyzing cloud migration strategies & translating tech publications](1.2-week2/)
+**Week 2:** [Identity and Access Management (IAM) & permissions provisioning for team members](1.2-week2/)
 
-**Week 3:** [Storing assets in Amazon S3, setting up AWS Budgets alerts & defining IAM policies](1.3-week3/)
+**Week 3:** [Core network design (Amazon VPC), splitting Private and Public subnets](1.3-week3/)
 
-**Week 4:** [Structuring VPC network topology, setting up RDS MySQL & configuring Security Groups](1.4-week4/)
+**Week 4:** [Setting up Internet Gateways, NAT Gateways & Security Group access controls](1.4-week4/)
 
-**Week 5:** [Evaluating core compute resources: AWS EC2 vs Serverless Lambda functions](1.5-week5/)
+**Week 5:** [Configuring Amazon S3 storage & deploying ReactJS frontend source code](1.5-week5/)
 
-**Week 6:** [Consolidating cloud fundamentals, exploring CloudFront CDN & drafting initial system design](1.6-week6/)
+**Week 6:** [Optimizing content delivery with CloudFront CDN & implementing AWS WAF protection](1.6-week6/)
 
-**Week 7:** [Connecting React frontend to Spring Boot backend, securing with JWT & running E2E tests](1.7-week7/)
+**Week 7:** [Configuring compute infrastructure & installing Spring Boot on Amazon EC2 instances](1.7-week7/)
 
-**Week 8:** [Building executable Spring Boot package (.jar), comparing Elastic Beanstalk vs custom EC2 deployment](1.8-week8/)
+**Week 8:** [Implementing traffic distribution with ALB & configuring Auto Scaling policies](1.8-week8/)
 
-**Week 9:** [Strengthening repository security, setting up CloudWatch logging & exception handling](1.9-week9/)
+**Week 9:** [Migrating MySQL database to Amazon RDS Multi-AZ & configuring ElastiCache Redis](1.9-week9/)
 
-**Week 10:** [Optimizing CloudFront distribution, finalizing 3-tier architecture diagram & presenting to community](1.10-week10/)
+**Week 10:** [Monitoring system health with CloudWatch & programming automated alerts via SNS](1.10-week10/)
 
-**Week 11:** [Defining Infrastructure as Code (IaC) with CloudFormation & performing production deployment](1.11-week11/)
+**Week 11:** [Reviewing topology design & optimizing data transfer costs with S3 Gateway Endpoint](1.11-week11/)
 
-**Week 12:** [Executing system load tests, managing cloud expenditures (FinOps) & final project review](1.12-week12/)
+**Week 12:** [Integrating and establishing communication across the 3-Tier architecture on the Internet](1.12-week12/)
+
+**Week 13:** [Executing load testing, resolving logic errors, finalizing report & project defense](1.13-week13/)
 

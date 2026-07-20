@@ -5,25 +5,23 @@ chapter: false
 pre: " <b> 1.3. </b> "
 ---
 
-Mục tiêu tuần 3:
-- Tìm hiểu và thực hành chuyên sâu về dịch vụ quản lý chi phí AWS Budgets để thiết lập các cơ chế giám sát tài khoản.
-- Kích hoạt cảnh báo ngân sách tự động để kiểm soát chi phí thực tập.
-- Khởi tạo môi trường lưu trữ hình ảnh thử nghiệm phục vụ cho các tài nguyên (ảnh thú cưng, hóa đơn dịch vụ) của dự án Pet Resort thông qua Amazon S3.
+### Mục tiêu trọng tâm
+- Bắt tay thiết kế bản đồ mạng lõi trên AWS bằng dịch vụ Amazon VPC.
+- Phân chia CIDR Block và cấu hình dải Subnet hợp lý cho hệ thống Pet Care.
+- Thiết lập ranh giới rõ ràng giữa vùng mạng nội bộ (Private Subnet) chứa Database/Backend và mạng công cộng (Public Subnet) chứa Load Balancer/NAT.
+
+### Bảng nhật ký công việc
 
 | Ngày | Nhiệm vụ | Ngày bắt đầu | Ngày kết thúc | Tài liệu tham khảo |
 |------|----------|--------------|---------------|-------------------|
-| 1 | Nghiên cứu tổng quan về AWS Budgets và tìm hiểu 4 loại ngân sách chính: Cost Budget, Usage Budget, RI Budget, và Savings Plans Budget. | 01/05/2026 | 01/05/2026 | AWS Study Group |
-| 2 | Thực hành tạo Cost Budget thông qua AWS Management Console (dịch vụ Billing) để nhận cảnh báo khi tổng chi phí vượt ngưỡng. | 02/05/2026 | 02/05/2026 | AWS Management Console |
-| 3 | Thực hành tạo Usage Budget để kiểm soát mức sử dụng theo từng dịch vụ, ví dụ thiết lập cảnh báo cho ngưỡng giờ sử dụng tài nguyên mỗi tháng. | 03/05/2026 | 03/05/2026 | AWS Management Console |
-| 4 | Cấu hình và kích hoạt hệ thống cảnh báo ngân sách tự động (AWS Budgets / Billing Alarms) để kiểm soát dung lượng Credit thực tập. | 04/05/2026 | 04/05/2026 | Tài liệu AWS Billing |
-| 5 | Nghiên cứu tài liệu về Reservation Instance (RI) Budget, Savings Plans Budget và xem xét các hướng dẫn minh họa. | 05/05/2026 | 05/05/2026 | AWS Study Group |
-| 6 | Thực hành tạo S3 Bucket đầu tiên trên AWS Console với tên định danh độc nhất phục vụ lưu trữ tài nguyên: `petshop-media-storage`. | 06/05/2026 | 06/05/2026 | Giao diện điều khiển AWS |
-| 7 | Đánh giá lại toàn bộ các bài lab cấu hình ngân sách và tổng hợp báo cáo worklog tuần. | 07/05/2026 | 07/05/2026 | AWS Study Group |
+| 1 | Nghiên cứu kiến trúc VPC, cách phân bổ CIDR Block và quy hoạch IP cho hệ thống. | 01/05/2026 | 01/05/2026 | [Amazon VPC Docs](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html) |
+| 2 | Phác thảo sơ đồ thiết kế VPC gồm 2 Availability Zones (AZs) để đảm bảo tính sẵn sàng cao. | 02/05/2026 | 02/05/2026 | |
+| 3 | Tạo VPC chính cho dự án với CIDR `10.0.0.0/16` trên bảng điều khiển AWS. | 04/05/2026 | 04/05/2026 | |
+| 4 | Cấu hình 2 Public Subnet (một cho mỗi AZ) để tiếp nhận lưu lượng truy cập từ ngoài Internet. | 05/05/2026 | 05/05/2026 | |
+| 5 | Cấu hình 4 Private Subnet (2 cho Backend App và 2 cho RDS Database) nhằm cô lập hoàn toàn tài nguyên nhạy cảm. | 06/05/2026 | 06/05/2026 | |
+| 6 | Kiểm tra lại bảng phân bổ địa chỉ IP của VPC và hoàn thành thiết kế sơ đồ mạng lõi. | 07/05/2026 | 07/05/2026 | |
 
-Thành tích tuần 3:
-
-• Nắm vững tư duy quản lý chi phí, hiểu rõ sự khác biệt giữa Cost Budget và Usage Budget để kiểm soát tài nguyên trên đám mây.
-
-• Hoàn thành việc giả lập cấu hình ngân sách với các tham số thực tế và kích hoạt thành công công cụ kiểm soát tự động để ngăn chặn rủi ro phát sinh chi phí ngoài ý muốn (vượt Credit thực tập).
-
-• Khởi tạo thành công không gian lưu trữ biệt lập `petshop-media-storage` trên Amazon S3, bước đầu xây dựng hạ tầng lưu trữ tài nguyên tĩnh cho dự án Pet Resort.
+### Kết quả đạt được
+- Tạo thành công Amazon VPC ổn định làm nền tảng mạng lõi cho toàn bộ dự án.
+- Thiết lập phân vùng rõ ràng với 2 Public Subnets và 4 Private Subnets trải rộng trên 2 Availability Zones.
+- Đảm bảo các tài nguyên hệ thống được cô lập đúng cách tại tầng mạng.

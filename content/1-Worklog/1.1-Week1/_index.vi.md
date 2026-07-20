@@ -5,23 +5,23 @@ chapter: false
 pre: " <b> 1.1. </b> "
 ---
 
-Mục tiêu trọng tâm của Tuần 1:
-- Giao lưu, kết nối với các Mentor từ FCJ và các thành viên trong nhóm thực tập sinh.
-- Nắm bắt các kiến thức nền tảng về Cloud Computing (Điện toán đám mây), đồng thời hoàn thiện việc khởi tạo tài khoản và thiết lập môi trường viết báo cáo.
+### Mục tiêu trọng tâm
+- Khởi động dự án Pet Resort, định hình mục tiêu và lộ trình phát triển.
+- Làm quen với bảng điều khiển AWS Management Console.
+- Bóc tách, phân tích các yêu cầu về tài nguyên đám mây cần thiết để vận hành ứng dụng.
+
+### Bảng nhật ký công việc
 
 | Ngày | Nhiệm vụ | Ngày bắt đầu | Ngày kết thúc | Tài liệu tham khảo |
 |------|----------|--------------|---------------|-------------------|
-| 1 | Nghiên cứu tài liệu về quy chế, lộ trình thực tập và theo dõi các video giới thiệu tổng quan về hệ sinh thái dịch vụ của AWS. | 17/04/2026 | 17/04/2026 | |
-| 2 | Tìm hiểu Module 01:<br>- Nắm vững khái niệm về Điện toán đám mây.<br>- Phân loại các mô hình triển khai và đánh giá những lợi ích cốt lõi mang lại. | 18/04/2026 | 18/04/2026 | |
-| 3 | - Khởi tạo thành công tài khoản AWS Free Tier.<br>- Thực hành thiết lập bảo mật cơ bản (Module 01):<br>+ Tạo nhóm quyền IAM Admin và cấu hình Admin User.<br>- Làm quen với công cụ Draw.io nhằm phục vụ cho việc thiết kế sơ đồ kiến trúc hệ thống sau này. | 20/04/2026 | 20/04/2026 | |
-| 4 | Nghiên cứu lý thuyết cơ bản về dịch vụ máy chủ ảo Amazon EC2 (bao gồm khái niệm Instance, phân loại máy chủ và cấu hình Security Group). | 21/04/2026 | 21/04/2026 | |
-| 5 | Tìm hiểu và triển khai framework Hugo (Static Site Generator) trên môi trường local, nắm bắt cách thức tổ chức và quản lý cấu trúc thư mục bài viết. | 22/04/2026 | 22/04/2026 | |
-| 6 | Thực hành trực tiếp trên AWS Management Console thông qua 5 bài lab nền tảng để làm quen giao diện, đồng thời tìm hiểu cơ chế áp dụng credit cho tài khoản Free Tier. | 23/04/2026 | 23/04/2026 | |
+| 1 | Họp nhóm thống nhất ý tưởng dự án Pet Resort và các tính năng chính cần triển khai. | 17/04/2026 | 17/04/2026 | |
+| 2 | Tìm hiểu giao diện AWS Console và các dịch vụ cơ bản của AWS. | 18/04/2026 | 18/04/2026 | [AWS Console](https://aws.amazon.com/console/) |
+| 3 | Phân tích kiến trúc ứng dụng (3-Tier) và bóc tách các tài nguyên AWS tương ứng (EC2, S3, RDS...). | 20/04/2026 | 20/04/2026 | |
+| 4 | Tìm hiểu các mô hình tính toán chi phí sơ bộ và các giới hạn dịch vụ trên tài khoản Free Tier. | 21/04/2026 | 21/04/2026 | [AWS Free Tier](https://aws.amazon.com/free/) |
+| 5 | Thiết lập môi trường làm việc local, cài đặt git và cấu hình Hugo để viết báo cáo. | 22/04/2026 | 22/04/2026 | [Hugo Docs](https://gohugo.io/documentation/) |
+| 6 | Tổng hợp danh sách tài nguyên đám mây cần thiết cho dự án và thông qua ý kiến của nhóm. | 23/04/2026 | 23/04/2026 | |
 
-Kết quả đạt được trong Tuần 1:
-
-• Xây dựng được tư duy tổng quát về hệ thống hạ tầng Cloud, nhận diện và phân biệt được các nhóm dịch vụ trọng tâm (Tính toán, Lưu trữ, Mạng lưới, Cơ sở dữ liệu).
-
-• Triển khai thành công các chính sách phân quyền IAM trên tài khoản AWS mới (áp dụng chuẩn bảo mật không sử dụng tài khoản Root cho các thao tác thông thường).
-
-• Cài đặt và khởi chạy thành công bộ source Hugo trên local, tạo tiền đề sẵn sàng để xây dựng và phát triển trang workshop cá nhân trong các tuần tiếp theo.
+### Kết quả đạt được
+- Xác định rõ kiến trúc hạ tầng tổng quan và các tài nguyên AWS cần sử dụng.
+- Hoàn thành thiết lập tài khoản và trang báo cáo cá nhân.
+- Thống nhất được tài liệu đặc tả hạ tầng ban đầu của dự án.

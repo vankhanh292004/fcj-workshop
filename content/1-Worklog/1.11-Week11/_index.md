@@ -5,55 +5,23 @@ chapter: false
 pre: " <b> 1.11. </b> "
 ---
 
-### Week 11 Objectives:
+### Core Objectives
+- Review the overall project topology design for the Pet Resort network infrastructure.
+- Implement a VPC Endpoint (S3 Gateway Endpoint) to optimize internal data transmission paths.
+- Reduce NAT Gateway billing costs by enabling private EC2 instances to download S3 assets without accessing the public Internet.
 
-* Study and practice **Infrastructure as Code (IaC)** with **AWS CloudFormation** to deploy AWS resources using configuration templates.
-* Receive feedback from Admins/Mentors to revise and finalize the final AWS architecture diagram.
-* Deploy the entire Pet Resort & Care System project to the actual Cloud environment based on the finalized architecture.
+### Worklog Table
 
-### Tasks to be implemented this week:
 | Day | Task | Start Date | End Date | References |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| Monday | - Receive feedback from admin: Fix the CloudFront flow for distributing Frontend and Media content to avoid flow errors; redraw connection lines for visual clarity.<br>- Finalize the AWS architecture blueprint. | 29/06/2026   | 29/06/2026      | Feedback from AWS Study Group Admin       |
-| Tuesday | - Research **AWS CloudFormation** service: Study Stack, Template (YAML/JSON) concepts and the Infrastructure as Code (IaC) automated resource provisioning workflow.<br>- Practice creating a Stack on CloudFormation Console: Configure parameters including **AvailabilityZone** (`us-east-1a`), **LatestAmiId** (Amazon Linux 2 AMI), notification email, and S3 Bucket name. | 30/06/2026   | 01/07/2026      | FCJ Workshop - CloudFormation Lab         |
-| Wednesday | - Upload two critical files to S3 Bucket `aws-backup-lab13-fcj`: `backup-lab.yaml` (infrastructure template) and `lambda_function.zip` (processing code) into the `Backup Plan/` directory.<br>- Deploy the `backup-plan-lab13` stack on CloudFormation, monitoring the resource creation process (CREATE_IN_PROGRESS). | 01/07/2026   | 02/07/2026      | AWS Documentation (CloudFormation, S3)    |
-| Thursday | - Deploy Compute Tier: Push Spring Boot Backend source code to EC2.<br>- Configure Auto Scaling Group and manage traffic with Application Load Balancer (ALB).<br>- Verify CloudFormation events: LambdaRole, SNSTopic, Instance, and Route all reached **CREATE_COMPLETE** status. | 02/07/2026   | 03/07/2026      | AWS Documentation (EC2, ALB, Auto Scaling)|
-| Saturday | - Deploy Edge Layer: Upload ReactJS static source code to S3 Frontend, create S3 Media.<br>- Configure CloudFront to route requests and attach AWS WAF to protect the system.        | 04/07/2026   | 04/07/2026      | AWS Documentation (CloudFront, S3, WAF)   |
+|-----|------|------------|----------|------------|
+| 1 | Consolidate the active network topology diagram and cross-reference with launched AWS resources. | 26/06/2026 | 26/06/2026 | |
+| 2 | Analyze AWS Billing reports, identifying high NAT Gateway data processing fees due to image transfers from S3 to EC2. | 27/06/2026 | 27/06/2026 | |
+| 3 | Study AWS VPC Endpoints types (Gateway vs Interface Endpoints). | 29/06/2026 | 29/06/2026 | [VPC Endpoints Docs](https://docs.aws.amazon.com/vpc/latest/privatelink/vpc-endpoints.html) |
+| 4 | Create an Amazon S3 Gateway Endpoint and associate it with the Route Tables of Private Subnets. | 30/06/2026 | 30/06/2026 | [S3 Gateway Endpoints](https://docs.aws.amazon.com/vpc/latest/privatelink/vpc-endpoints-s3.html) |
+| 5 | Modify S3 Bucket Policies and Security Groups to permit internal endpoint access. | 01/07/2026 | 01/07/2026 | |
+| 6 | Perform download benchmarks from EC2 in the Private Subnet to verify that data travels strictly through the VPC endpoint. | 02/07/2026 | 02/07/2026 | |
 
-### Achievements in Week 11:
-
-####  Mastered Infrastructure Automation with AWS CloudFormation (IaC)
-* **Understood Automated Infrastructure Provisioning Workflow:**
-  * When configuring a Stack in CloudFormation, the system requires the Stack name to be entered (*Stack name is required*).
-  * The deployment process requires specific Parameters including the **AvailabilityZone** (configured as `us-east-1a`) and the **LatestAmiId** (path to the Amazon Linux 2 AMI).
-  * Additional required parameters include: **NotificationEmail** (notification recipient email), **S3BucketName** (S3 Bucket name), and **S3KeyLambdaZip** (path to the Lambda code Zip file).
-* **Practiced on S3 and CloudFormation Console:**
-  * In the S3 interface, the bucket `aws-backup-lab13-fcj` was created containing the `Backup Plan/` directory with two critical files: `backup-lab.yaml` (infrastructure configuration template) and `lambda_function.zip` (automated processing source code).
-  * The CloudFormation console showed the `backup-plan-lab13` stack was successfully initialized on October 27, 2024, with an initial status of **CREATE_IN_PROGRESS**.
-  * The Events section of the stack displayed the resource creation history: **LambdaRole**, **SNSTopic**, **Instance**, and **Route** components all reached **CREATE_COMPLETE** status.
-
-####  Architecture Finalization
-* Successfully fixed logic errors in the Data Flow design based on Admin's feedback: Clearly separated the role of CloudFront combined with S3 for the static Frontend, and the direct Media resource retrieval flow.
-* Finalized a professional 3-Tier architecture diagram, fully prepared for the final project reporting and acceptance phase.
-
-####  Cloud Deployment
-* Successfully migrated the entire *Pet Resort & Care System* from the Local environment to the actual AWS infrastructure.
-* The system is now accessible smoothly via the Internet using a custom domain. API calls from Frontend to Backend, as well as image/media retrieval flows, operate seamlessly through the global CDN.
-* Successfully applied Zero Trust security principles: Completely disabled SSH port (Port 22), isolated the Database within the Private Subnet, and securely managed credentials using AWS Secrets Manager.
-
-####  Deployment Evidence
-
-* **VPC Resource Map:** Visualizing the subnet structure, route tables, and gateways for the Multi-AZ setup.
-  ![VPC Resource Map](/images/1-Worklog/vpc_resource_map.png)
-
-* **Security Groups:** Structured firewall rules configured for ALB, Backend, Database, and Cache.
-  ![Security Groups](/images/1-Worklog/security_groups.png)
-
-* **RDS Database Initialization & Pricing:** Database estimated monthly cost details during RDS MySQL configuration.
-  ![RDS Database Estimated Costs](/images/1-Worklog/rds_estimated_costs.png)
-
-* **RDS MySQL Instance Launch:** The `petshop-database-1` instance in `Creating` status.
-  ![RDS Instance Launching](/images/1-Worklog/rds_creating.png)
-
-* **RDS Connectivity & Details:** Database specifications showing its private endpoint and Multi-AZ ready placement.
-  ![RDS Connectivity Details](/images/1-Worklog/rds_connectivity.png)
+### Achievements
+- Optimized data transport pathways between Amazon EC2 and Amazon S3.
+- Significantly reduced NAT Gateway processing fees by routing S3 traffic internally within the AWS private fiber network.
+- Standardized and updated the final network topology diagram for report documentation.

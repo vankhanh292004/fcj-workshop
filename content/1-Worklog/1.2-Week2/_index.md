@@ -5,24 +5,23 @@ chapter: false
 pre: " <b> 1.2. </b> "
 ---
 
-### Week 2 Objectives:
-- Enhance communication, discuss project directions, and allocate tasks within the internship group.
-- Dive deeper into AWS technical documentation and begin practicing cloud-domain translation skills.
+### Core Objectives
+- Establish the Identity and Access Management (AWS IAM) system.
+- Create individual IAM User accounts for each project team member.
+- Define and assign security policies (Policies & Groups) adhering to the principle of least privilege.
 
-### Tasks carried out this week:
-| Day | Task | Start Date | Completion Date | Reference Material |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 1 | Gain a deeper understanding of the cloud migration roadmap through AWS supplementary resources. | 24/04/2026 | 24/04/2026 | AWS Whitepapers |
-| 2 | Survey, select, and comprehend relevant technical articles (AWS Blogs) on the official AWS website. | 25/04/2026 | 25/04/2026 | <https://aws.amazon.com/blogs/> |
-| 3 | Filter content and proceed with the draft translation of the first technical article for future Hugo integration. | 26/04/2026 | 26/04/2026 | |
-| 4 | Review and refine the translated AWS article, ensuring cloud-specific technical terms are accurately localized. | 27/04/2026 | 27/04/2026 | AWS Documentation |
-| 5 | Participate in a group meeting to discuss project directions, brainstorm ideas, and allocate tasks for the Proposal. | 28/04/2026 | 28/04/2026 | |
-| 6 | Set up the local Hugo environment and test publishing the translated AWS blog post to verify formatting. | 29/04/2026 | 29/04/2026 | Hugo Documentation |
-| 7 | Finalize the Week 2 worklog, consolidate team feedback on the Proposal, and outline the objectives for Week 3. | 30/04/2026 | 30/04/2026 | |
+### Worklog Table
 
-### Week 2 Achievements:
+| Day | Task | Start Date | End Date | References |
+|-----|------|------------|----------|------------|
+| 1 | Study AWS IAM documentation, including User, Group, Policy, and Role concepts. | 24/04/2026 | 24/04/2026 | [AWS IAM Docs](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html) |
+| 2 | Enable Multi-Factor Authentication (MFA) on the Root Account to secure top-level infrastructure. | 25/04/2026 | 25/04/2026 | |
+| 3 | Create IAM Groups representing distinct roles (Developer, Admin, DevOps) within the team. | 27/04/2026 | 27/04/2026 | |
+| 4 | Draft custom JSON IAM policies to grant restricted access to S3, EC2, and RDS services. | 28/04/2026 | 28/04/2026 | |
+| 5 | Provision individual IAM User accounts for each team member and assign them to respective Groups. | 29/04/2026 | 29/04/2026 | |
+| 6 | Verify login credentials, configure member MFA devices, and securely hand over access details. | 30/04/2026 | 30/04/2026 | |
 
-* Mastered the general process and core phases involved when an enterprise migrates its infrastructure to the cloud platform.
-* Became familiar with the technical tone of AWS Blogs and completed the raw translation for the first technology article.
-* Successfully configured the local Hugo environment and tested the integration of the translated content.
-* Aligned on several key conceptual baselines with group members to prepare for the upcoming project Proposal.
+### Achievements
+- Secured the AWS Root account with multi-factor authentication (MFA).
+- Provisioned individual IAM User accounts for all team members, eliminating root or shared credentials.
+- Successfully configured security groups and policies, aligning with AWS security best practices.

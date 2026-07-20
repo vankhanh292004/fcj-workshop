@@ -1,62 +1,62 @@
----
+﻿---
 title: "Chia sẻ, đóng góp ý kiến"
 weight: 7
 chapter: false
 pre: "  7.  "
 ---
 
->Tại đây bạn có thể tự do đóng góp ý kiến cá nhân về những trải nghiệm khi tham gia chương trình First Cloud Journey, giúp team FCJ cải thiện những vấn đề còn thiếu sót dựa trên các hạng mục sau:
+> Tại đây bạn có thể tự do đóng góp ý kiến cá nhân về những trải nghiệm khi tham gia chương trình First Cloud Journey, giúp team FCJ cải thiện những vấn đề còn thiếu sót dựa trên các hạng mục sau:
 
 ### Đánh giá chung
 
 **1. Môi trường làm việc**  
 
-Môi trường làm việc tại FCJ mang đậm tính cởi mở, chuyên nghiệp và năng động. Không gian làm việc được tổ chức khoa học, tạo điều kiện tối đa cho sự tập trung. Điều tôi trân trọng nhất là sự thân thiện của các thành viên trong team, mọi người luôn sẵn sàng hỗ trợ nhau ngay cả ngoài giờ hành chính. Để không khí thêm phần gắn kết, chương trình có thể cân nhắc tổ chức định kỳ các buổi giao lưu hoặc hoạt động team-building.  
+Môi trường tại FCJ rất năng động, cởi mở và chuyên nghiệp. Mọi ý kiến đóng góp từ thực tập sinh đều được lắng nghe và tôn trọng. Việc được cung cấp một không gian làm việc khuyến khích tư duy sáng tạo giúp cả nhóm phối hợp rất hiệu quả. Để tăng cường sự gắn kết, chương trình có thể tổ chức thêm các buổi giao lưu ngắn giữa các nhóm thực tập sinh để chia sẻ kinh nghiệm vận hành hệ thống.
 
 **2. Sự hỗ trợ của mentor / team admin**  
 
-Sự đồng hành của các anh chị Mentor và Team Admin là một điểm sáng lớn của chương trình. Các thủ tục, tài liệu luôn được Admin chuẩn bị chu đáo để công việc diễn ra trơn tru. Về phía Mentor, các anh chị không chỉ hướng dẫn tận tình mà còn có phương pháp đào tạo rất hay: khuyến khích tư duy phản biện, để thực tập sinh tự mày mò, gỡ lỗi và đưa ra giải pháp thay vì chỉ nhận đáp án có sẵn.  
+Sự đồng hành của Mentor và Admin là điểm tựa vững chắc nhất trong suốt kỳ thực tập. Admin hỗ trợ các thủ tục hành chính rất chu đáo. Mentor có phương pháp định hướng rất tốt: thay vì chỉ ra ngay lỗi sai khi chúng tôi cấu hình sai Route Table, Security Group hay RDS Multi-AZ, Mentor luôn hướng dẫn cách đọc CloudWatch Logs và phân tích lỗi để cả nhóm tự thảo luận và giải quyết. Điều này rèn luyện tư duy độc lập và kỹ năng xử lý sự cố thực tế của một kỹ sư hệ thống.
 
 **3. Sự phù hợp giữa công việc và chuyên ngành học**  
 
-Những kiến thức về Kỹ thuật Phần mềm mà tôi được trang bị tại giảng đường đã được củng cố và mở rộng rất nhiều qua kỳ thực tập này. Công việc giúp tôi bước ra khỏi vùng an toàn của việc chỉ viết code, cho phép tôi có cái nhìn toàn diện hơn về vòng đời phát triển sản phẩm, đặc biệt là khía cạnh triển khai và vận hành hệ thống.
+Công việc thực tập hoàn toàn phù hợp và bổ trợ mạnh mẽ cho chuyên ngành học của tôi. Từ việc chỉ tiếp cận mã nguồn ứng dụng ở local, tôi đã có cơ hội thiết kế bản đồ mạng lõi VPC, thiết lập cổng NAT Gateway, cấu hình cân bằng tải ALB và co giãn tự động Auto Scaling. Điều này giúp tôi hiểu sâu sắc cách vận hành thực tế của một hệ thống 3-Tier vững chắc trên môi trường đám mây.
 
 **4. Cơ hội học hỏi & phát triển kỹ năng**  
 
-Trải nghiệm tại FCJ là môi trường hoàn hảo để rèn luyện song song cả kỹ năng cứng lẫn kỹ năng mềm. Tôi đã làm quen sâu hơn với các công cụ quản lý dự án, nâng cao kỹ năng làm việc nhóm và cách giao tiếp chuyên nghiệp trong môi trường doanh nghiệp. Những kinh nghiệm thực chiến từ các anh chị đi trước giúp tôi định hình rõ ràng hơn con đường sự nghiệp sắp tới.
+Tôi đã học được rất nhiều kiến thức thực tế về thiết kế hạ tầng AWS, từ quản lý định danh IAM, tối ưu hóa lưu trữ với S3 đến tăng tốc truy cập qua CloudFront CDN và bảo vệ hệ thống bằng AWS WAF. Bên cạnh kỹ năng cứng, khả năng phối hợp nhóm để giải quyết các xung đột định tuyến mạng hay tối ưu hóa chi phí đám mây (FinOps) thông qua VPC Endpoint cũng tiến bộ vượt bậc.
 
-**5. Văn hóa & tinh thần đồng đội**  
+**5. Văn hóa doanh nghiệp và Tinh thần đồng đội**  
 
-Tôi thực sự ấn tượng với văn hóa làm việc tôn trọng và bình đẳng tại đây. Mọi người làm việc với tinh thần trách nhiệm cao nhưng không kém phần vui vẻ. Trong những giai đoạn dự án cần đẩy nhanh tiến độ, cả team luôn kề vai sát cánh, hỗ trợ chéo mà không phân biệt vị trí hay cấp bậc. Điều này giúp một thực tập sinh như tôi cảm nhận rõ mình là một mảnh ghép thực sự của tập thể.
+Văn hóa tôn trọng và bình đẳng tại đây rất tuyệt vời. Tinh thần đồng đội được thể hiện rõ nhất trong các giai đoạn quan trọng của dự án như lúc liên kết 3 tầng dịch vụ và thực hiện kiểm thử chịu tải (Load Test). Cả nhóm đã phối hợp ăn ý, cùng nhau phân tích điểm nghẽn của Database và vá lỗi logic để đưa ứng dụng vận hành trơn tru.
 
-**6. Chính sách / phúc lợi cho thực tập sinh**  
+**6. Chế độ thực tập / Phúc lợi**  
 
-Công ty cung cấp các khoản phụ cấp hợp lý và đặc biệt là sự linh hoạt về mặt thời gian, giúp những sinh viên năm cuối dễ dàng cân bằng lịch học và lịch làm. Hơn thế nữa, các buổi đào tạo nội bộ (internal training) mang lại giá trị kiến thức cực kỳ lớn và thiết thực.
+Chương trình cung cấp mức hỗ trợ hợp lý cùng thời gian làm việc linh hoạt, giúp sinh viên năm cuối dễ dàng cân đối giữa việc học trên trường và việc thực tập. Các buổi đào tạo nội bộ mang lại lượng kiến thức thực tế cực kỳ giá trị cho định hướng nghề nghiệp sau này.
 
-### Một số câu hỏi khác
+### Câu hỏi phụ thêm
 
-**Điều bạn hài lòng nhất trong thời gian thực tập?**  
+**Điều gì làm bạn hài lòng nhất trong suốt kỳ thực tập?**  
 
-Trải nghiệm tuyệt vời nhất là được "thực chiến" 100% trên môi trường AWS thực tế. Việc tự tay thiết kế và cấu hình toàn bộ hạ tầng từ VPC, EC2 Auto Scaling, RDS Multi-AZ đến triển khai các giải pháp tối ưu như S3 Gateway Endpoint mang lại cảm giác rất thành tựu. Bên cạnh đó, tư duy "tự chủ giải quyết vấn đề" mà Mentor định hướng đã giúp tôi trưởng thành hơn rất nhiều.
+Đó là cảm giác tự hào khi thiết kế và vận hành thành công toàn bộ hệ thống Pet Resort từ con số 0 lên Cloud. Việc trực tiếp cấu hình bảo mật IAM, tối ưu hóa chi phí truyền tải qua S3 Gateway Endpoint và chứng kiến hệ thống tự động co giãn (Auto Scaling) khi chạy thử nghiệm tải cao (Load Test) mang lại những bài học thực tế vô giá mà sách vở không có được.
 
-**Điều bạn nghĩ công ty cần cải thiện cho các thực tập sinh sau?**  
+**Theo bạn, công ty nên cải thiện điều gì cho các khóa thực tập sinh tiếp theo?**  
 
-Chương trình có thể bổ sung thêm các buổi Mini-Workshop ngắn ở những tuần đầu tiên, tập trung vào việc thiết lập CI/CD cơ bản (ví dụ: GitHub Actions) hoặc hướng dẫn cách đọc, quản lý log tập trung (như CloudWatch Logs). Việc được trang bị trước những công cụ này sẽ giúp các bạn sinh viên giảm bớt thời gian loay hoay khi bắt đầu đẩy dự án lên Cloud.
+Chương trình có thể bổ sung thêm các buổi chuyên đề ngắn về CI/CD (như GitHub Actions) hoặc hướng dẫn thực hành chuyên sâu về quản lý và truy vết log tập trung trên CloudWatch ngay trong những tuần đầu tiên để các bạn thực tập sinh dễ dàng tiếp cận dự án.
 
-**Nếu giới thiệu cho bạn bè, bạn có khuyên họ thực tập ở đây không? Vì sao?**  
+**Nếu được đề cử cho một người bạn, bạn có giới thiệu họ thực tập ở đây không? Vì sao?**  
 
-Chắc chắn là có. Đây thực sự là một "cú hích" mang tính thực tế cực kỳ cần thiết và vô giá đối với bất kỳ sinh viên IT nào có định hướng theo đuổi mảng Cloud/DevOps. Chương trình đã thu hẹp đáng kể khoảng cách giữa những lý thuyết trên ghế nhà trường và quy trình vận hành khắt khe của doanh nghiệp.
+Chắc chắn là có. Đây là bệ phóng thực tế không thể tốt hơn cho bất kỳ sinh viên công nghệ nào muốn đi theo con đường Cloud/DevOps. Kỳ thực tập giúp học viên hình thành tư duy hệ thống chuyên nghiệp và chuẩn mực của doanh nghiệp.
 
-### Đề xuất & mong muốn
+### Đề xuất & Kỳ vọng
 
-**Đề xuất cải thiện trải nghiệm:**  
+**Đề xuất để cải thiện trải nghiệm:**  
 
-Nên có thêm những buổi chia sẻ chéo hoặc giao lưu trực tiếp giữa các nhóm thực tập sinh với nhau. Đây sẽ là không gian mở để các nhóm chia sẻ những case-study sửa lỗi hạ tầng thú vị mà team mình gặp phải, từ đó học hỏi lẫn nhau hiệu quả hơn.
+Nên có thêm các buổi chia sẻ chéo (cross-sharing) giữa các nhóm để trao đổi về các bài học gỡ lỗi hạ tầng (Infrastructure Troubleshooting) thực tế mà mỗi nhóm tự tích lũy được trong quá trình thực hiện dự án.
 
-**Mong muốn trong tương lai:**  
+**Kỳ vọng đối với bản thân trong tương lai:**  
 
-Tôi rất hy vọng có cơ hội được tiếp tục đồng hành và gắn bó lâu dài cùng chương trình First Cloud Journey trong những vai trò tiếp theo, tiếp tục học hỏi chuyên sâu để hướng tới mục tiêu trở thành một Cloud Engineer chuyên nghiệp.
+Tôi mong muốn tiếp tục trau dồi các kiến thức về Điện toán đám mây để trở thành một Kỹ sư giải pháp hạ tầng (Cloud Solutions Architect) chuyên nghiệp, đồng hành cùng các dự án quy mô lớn hơn của AWS trong tương lai.
 
-**Góp ý khác (tự do chia sẻ):**  
+**Ý kiến khác (chia sẻ tự do):**  
 
-Gửi lời cảm ơn chân thành và sâu sắc nhất đến Ban tổ chức chương trình cùng các anh chị Mentor. Cảm ơn sự nhẫn nại, tâm huyết và thời gian quý báu mà các anh chị đã dành ra để dẫn dắt, giúp đỡ team hoàn thành tốt dự án này. Chúc chương trình và công ty ngày càng phát triển mạnh mẽ.
+Tôi xin gửi lời cảm ơn chân thành sâu sắc nhất đến Ban tổ chức chương trình và các anh chị Mentor đã luôn kiên nhẫn hướng dẫn, hỗ trợ nhóm chúng tôi hoàn thành dự án một cách tốt nhất. Chúc chương trình và công ty ngày càng phát triển vững mạnh!

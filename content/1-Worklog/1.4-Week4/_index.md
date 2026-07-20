@@ -5,23 +5,22 @@ chapter: false
 pre: " <b> 1.4. </b> "
 ---
 
-Core Objectives of Week 4:
-- Research Virtual Private Cloud (VPC) infrastructure to build a secure and isolated deployment environment for the system.
-- Deploy Amazon RDS relational database (MySQL engine) serving the Pet Resort & Care project.
-- Configure foundational Security Groups to establish a firewall layer protecting the data.
+### Core Objectives
+- Set up network gateways to connect the VPC to external resources (Internet Gateway & NAT Gateway).
+- Configure Route Tables to direct packet traffic for each subnet type (Public & Private).
+- Create and configure instance-level firewalls (Security Groups) to regulate inbound and outbound data streams.
 
-| Day | Task | Start Date | End Date | Reference Material |
-|-----|------|------------|----------|--------------------|
-| 1 | Study fundamental concepts of Amazon VPC, the principles of networking allocation into Public Subnets (receiving external traffic) and Private Subnets (hiding the Database). | 11/05/2026 | 11/05/2026 | Amazon VPC Documentation |
-| 2 | Explore Amazon RDS database service, evaluating the benefits of using a Managed RDS Service compared to self-operating MySQL on EC2. | 12/05/2026 | 12/05/2026 | Amazon RDS Documentation |
-| 3 | Initialize an Amazon RDS MySQL database instance (applying Single-AZ configuration within the Free Tier to optimize the internship budget). | 13/05/2026 | 13/05/2026 | AWS RDS Console |
-| 4 | Configure the Security Group for the Database: Restrict access permissions only from internal IP ranges or authorized servers, completely blocking direct connections from the Internet. | 14/05/2026 | 14/05/2026 | AWS Security Best Practices |
-| 5 | Verify connection information (Endpoint URL) of the Database; prepare core data table structures (User, Pet, Order) to be ready for backend integration. | 15/05/2026 | 15/05/2026 | |
+### Worklog Table
 
-Achievements of Week 4:
+| Day | Task | Start Date | End Date | References |
+|-----|------|------------|----------|------------|
+| 1 | Create an Internet Gateway (IGW) and attach it to the project VPC to enable Internet access for Public Subnets. | 08/05/2026 | 08/05/2026 | [VPC Gateways](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Internet_Gateway.html) |
+| 2 | Configure Route Tables for Public Subnets to direct `0.0.0.0/0` traffic through the Internet Gateway. | 09/05/2026 | 09/05/2026 | |
+| 3 | Allocate an Elastic IP and launch a NAT Gateway in the Public Subnet to allow one-way outbound Internet access for Private Subnets. | 11/05/2026 | 11/05/2026 | [NAT Gateway Docs](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html) |
+| 4 | Update Route Tables for Private Subnets to forward outgoing Internet-bound traffic through the NAT Gateway. | 12/05/2026 | 12/05/2026 | |
+| 5 | Design specific Security Groups for the Application Load Balancer, EC2 Web Servers, and RDS Database. | 13/05/2026 | 13/05/2026 | [Security Groups](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html) |
+| 6 | Set up Inbound/Outbound rules (e.g., restrict EC2 to ALB traffic only, restrict RDS to EC2 traffic only). | 14/05/2026 | 14/05/2026 | |
 
-• Finalized network planning and secure architecture design mindset on the Cloud environment based on the VPC model and strict subnet segregation strategies.
-
-• Successfully launched the MySQL database management system on the Amazon RDS platform (Single-AZ mode), ensuring technical requirements are met while maximizing credit savings.
-
-• Successfully applied a firewall layer using Security Groups, creating a robust shield to protect the Database instance from unauthorized access threats outside the network.
+### Achievements
+- Completed VPC network routing: Public Subnets communicate bidirectionally with the Internet, while Private Subnets maintain secure outbound-only connection through the NAT Gateway.
+- Established fine-grained Security Group rules, ensuring unauthorized external connections cannot bypass intermediate tiers to reach the Backend or Database.

@@ -5,29 +5,31 @@ chapter: false
 pre: " <b> 1. </b> "
 ---
 
-Worklog này ghi lại hành trình thực tập 12 tuần tại **AWS First Cloud Journey** (tháng 4 - tháng 7 năm 2026). Trong suốt quá trình này, nhóm đã xây dựng và triển khai hệ thống **Pet Resort & Care** — ứng dụng web kết hợp thương mại điện tử thú cưng và đặt lịch spa — lên nền tảng AWS Cloud.
+Worklog này ghi lại hành trình thực tập 13 tuần tại **AWS First Cloud Journey** (từ ngày 17/04/2026 đến ngày 20/07/2026). Trong suốt quá trình này, nhóm đã xây dựng và triển khai hệ thống **Pet Resort & Care** — ứng dụng quản lý và đặt lịch chăm sóc thú cưng — lên nền tảng AWS Cloud dưới góc nhìn thiết kế, xây dựng và vận hành hạ tầng của một kỹ sư hệ thống.
 
-**Tuần 1:** [Khởi động với AWS Cloud, thiết lập tài khoản & cấu hình trang Hugo](1.1-week1/)
+**Tuần 1:** [Khởi động dự án Pet Resort, làm quen với AWS Console và phân tích yêu cầu tài nguyên đám mây](1.1-week1/)
 
-**Tuần 2:** [Tìm hiểu mô hình dịch chuyển đám mây & biên dịch tài liệu công nghệ](1.2-week2/)
+**Tuần 2:** [Xây dựng hàng rào quản lý định danh IAM và phân quyền cho các thành viên trong nhóm](1.2-week2/)
 
-**Tuần 3:** [Quản lý tài nguyên S3, thiết lập cảnh báo AWS Budgets & phân quyền IAM](1.3-week3/)
+**Tuần 3:** [Thiết kế bản đồ mạng lõi VPC, phân chia vùng mạng nội bộ (Private) và công cộng (Public)](1.3-week3/)
 
-**Tuần 4:** [Thiết lập hạ tầng mạng VPC, cơ sở dữ liệu RDS MySQL & cấu hình tường lửa Security Groups](1.4-week4/)
+**Tuần 4:** [Thiết lập cổng kết nối Internet Gateway, NAT Gateway và chốt chặn bảo mật Security Group](1.4-week4/)
 
-**Tuần 5:** [Khảo sát nhóm dịch vụ tính toán: Phân tích so sánh giữa EC2 và serverless Lambda](1.5-week5/)
+**Tuần 5:** [Khởi tạo không gian lưu trữ Amazon S3 và đẩy mã nguồn ReactJS lên Bucket](1.5-week5/)
 
-**Tuần 6:** [Hệ thống hóa kiến thức nền tảng, nghiên cứu dịch vụ CDN CloudFront & phác thảo sơ đồ hạ tầng](1.6-week6/)
+**Tuần 6:** [Tối ưu hóa phân phối nội dung toàn cầu qua CloudFront CDN và thiết lập lá chắn bảo mật WAF](1.6-week6/)
 
-**Tuần 7:** [Liên kết Frontend với API Backend, cấu hình xác thực JWT & chạy thử nghiệm E2E](1.7-week7/)
+**Tuần 7:** [Cấu hình hạ tầng tính toán và cài đặt môi trường chạy Spring Boot trên máy chủ ảo EC2](1.7-week7/)
 
-**Tuần 8:** [Đóng gói ứng dụng Spring Boot (.jar), phân tích lựa chọn giữa Elastic Beanstalk và EC2](1.8-week8/)
+**Tuần 8:** [Xây dựng cơ chế phân bổ lưu lượng thông minh với ALB và cấu hình co giãn tự động Auto Scaling](1.8-week8/)
 
-**Tuần 9:** [Nâng cao an toàn mã nguồn, theo dõi hệ thống qua CloudWatch và cấu hình xử lý ngoại lệ](1.9-week9/)
+**Tuần 9:** [Dịch chuyển cơ sở dữ liệu MySQL lên Amazon RDS Multi-AZ và thiết lập bộ nhớ đệm ElastiCache](1.9-week9/)
 
-**Tuần 10:** [Tối ưu hóa CloudFront CDN, hoàn thiện bản vẽ kiến trúc 3-Tier & tiếp nhận phản hồi từ cộng đồng](1.10-Week10/)
+**Tuần 10:** [Giám sát sức khỏe hệ thống bằng CloudWatch và lập trình kịch bản gửi cảnh báo qua SNS](1.10-week10/)
 
-**Tuần 11:** [Thiết lập hạ tầng bằng mã (IaC - CloudFormation) & triển khai toàn bộ ứng dụng lên AWS Cloud](1.11-week11/)
+**Tuần 11:** [Rà soát bản vẽ thiết kế hạ tầng và tối ưu hóa chi phí với S3 Gateway Endpoint](1.11-week11/)
 
-**Tuần 12:** [Đánh giá hiệu năng chịu tải, tối ưu hóa ngân sách đám mây (FinOps) & nghiệm thu dự án](1.12-week12/)
+**Tuần 12:** [Liên kết thông luồng 3 tầng dịch vụ (Frontend - Backend - Database) trên môi trường Internet](1.12-week12/)
+
+**Tuần 13:** [Kiểm thử chịu tải hệ thống, vá lỗi logic, hoàn thiện báo cáo và bảo vệ dự án cuối kỳ](1.13-week13/)
 

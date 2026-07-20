@@ -5,35 +5,23 @@ chapter: false
 pre: " <b> 1.6. </b> "
 ---
 
-### Week 6 Objectives:
-* Attend the office for self-study sessions and group discussions to resolve outstanding cloud infrastructure queries.
-* Review, audit, and systematize knowledge regarding the core service groups covered (IAM, S3, VPC, EC2).
-* Investigate theoretical static hosting solutions and draft the preliminary architecture diagram for the Pet Resort & Care project.
+### Core Objectives
+- Distribute static content globally with low latency using Amazon CloudFront CDN.
+- Secure S3 Bucket access, restricting public S3 entries by forcing all traffic through CloudFront via Origin Access Control (OAC).
+- Configure AWS WAF (Web Application Firewall) to protect the frontend application from malicious web exploits (SQLi, XSS, etc.).
 
-### Tasks carried out this week:
-| Day | Task | Start Date | Completion Date | Reference Material |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 1 | Attend the office for self-study; audit and review all AWS account security configurations (Root Account & IAM Users), and optimize Password Policies. | 25/05/2026 | 25/05/2026 | AWS IAM Documentation |
-| 2 | Conduct a deep-dive review into Amazon S3 storage services; practice advanced security setups including S3 Block Public Access and Object Ownership. | 26/05/2026 | 26/05/2026 | Amazon S3 Guide |
-| 3 | Participate in office group discussions; re-examine VPC subnetting theories, inbound/outbound traffic flows through Public/Private Subnets, and Security Groups configurations. | 27/05/2026 | 27/05/2026 | Amazon VPC Documentation |
-| 4 | Study theoretical implementations for distributing static frontends; explore how to combine Amazon S3 with Amazon CloudFront (CDN) to optimize page loading speeds. | 28/05/2026 | 28/05/2026 | AWS Web Hosting Blog |
-| 5 | Practice drafting the preliminary system architecture for the Pet Resort & Care project using Draw.io; compile documentation for the upcoming Proposal week. | 29/05/2026 | 29/05/2026 | |
+### Worklog Table
 
-### Week 6 Achievements:
+| Day | Task | Start Date | End Date | References |
+|-----|------|------------|----------|------------|
+| 1 | Research CloudFront operations, Edge Locations, TTL, cache behaviors, and Origin configurations. | 22/05/2026 | 22/05/2026 | [Amazon CloudFront Docs](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html) |
+| 2 | Create a CloudFront Distribution pointing to the ReactJS static hosting S3 bucket as its origin. | 23/05/2026 | 23/05/2026 | |
+| 3 | Implement Origin Access Control (OAC) and update the S3 bucket policy to only allow traffic originating from CloudFront. | 25/05/2026 | 25/05/2026 | |
+| 4 | Configure custom error pages on CloudFront to route 403/404 errors back to `index.html` with a 200 status code for SPA routing. | 26/05/2026 | 26/05/2026 | |
+| 5 | Study AWS WAF concepts and create a basic Web ACL configuration. | 27/05/2026 | 27/05/2026 | [AWS WAF Docs](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html) |
+| 6 | Attach the AWS Managed Ruleset Web ACL to the CloudFront distribution and verify rule enforcement. | 28/05/2026 | 28/05/2026 | |
 
-* **Comprehensive Core Knowledge Systematization:** Mastered the operational mechanics of core AWS service branches (Compute, Networking, Storage, Security) mid-internship, ensuring a solid foundation before major deployment phases.
-
-* **Optimized Internship Account Security:**
-  * Verified successful Multi-Factor Authentication (MFA) activation for both Root and IAM User accounts.
-  * Implemented the Principle of Least Privilege across member IAM Users to enforce strict resource governance.
-
-* **Proficiency in AWS CLI Core Operations for Resource Auditing:**
-  * `aws sts get-caller-identity`: Verified and authenticated the current active IAM User identity.
-  * `aws s3 ls`: Listed running storage cluster repositories (S3 Buckets) within the environment.
-  * Practiced command-line asset bucket provisioning and termination sequences to adapt to terminal-based resource management.
-
-* **Refined Secure Network Architecture Design Thinking:** Understood how to position an Application Load Balancer (ALB) in Public Subnets to face internet entry points while shielding core resources (EC2 Spring Boot Backend, RDS MySQL) inside Private Subnets away from public exposure.
-
-* **Completed the Draft Architecture Diagram:** Formulated a distinct roadmap for the Pet Shop layout, tracing user requests from Route 53, fetching static UI components from CloudFront/S3 Frontend, up to API routing towards the backend layer.
-
-* **Enhanced Independent Study and Peer Collaboration:** Resolved remaining hands-on lab blocks through direct interaction and knowledge sharing with team members during office hours.
+### Achievements
+- Enhanced page load speeds globally by caching frontend assets at CloudFront edge locations.
+- Restricted direct public access to the S3 bucket, ensuring users only access the site through the CloudFront CDN endpoint.
+- Deployed AWS WAF to secure the application frontend against common web threats.
