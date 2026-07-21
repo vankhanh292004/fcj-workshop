@@ -57,7 +57,16 @@ pre: " <b> 4.1. </b> "
 
 #### 1. Định hướng sự nghiệp và Kỹ năng làm việc nhóm
 - **Lộ trình thăng tiến (Vinh Trần):** Phác họa bức tranh thực tế từ một IT Helpdesk hỗ trợ người dùng cơ bản tiến lên vị trí Senior Sysadmin. Nhấn mạnh tầm quan trọng của việc tự học các kiến thức nền tảng (Linux, Networking), kỹ năng scripting (Bash/Python) và sự chuyển dịch tất yếu sang Cloud/DevOps.
+
+![From IT Helpdesk to Senior Sysadmin - Vinh Trần](/images/4-EventParticipated/4.1-Event1/vinh_tran_career.png)
+
+![This is not a story about extraordinary success - Vinh Trần](/images/4-EventParticipated/4.1-Event1/vinh_tran_story.png)
+
 - **Kỹ năng làm việc nhóm (Trương Phước):** Cách giải quyết xung đột (conflict resolution), quy trình làm việc với Git chuẩn xác trong team, và tầm quan trọng của giao tiếp minh bạch. Kỹ thuật tốt là chưa đủ, một kỹ sư giỏi phải biết phối hợp và thấu hiểu đồng đội.
+
+![The Art of Effective Teamwork - Trương Phước](/images/4-EventParticipated/4.1-Event1/truong_phuoc_teamwork.png)
+
+
 
 #### 2. Kỷ nguyên Ảo hóa với Docker (Bảo Huỳnh)
 - Giải quyết triệt để vấn đề *"Code chạy trên máy tôi nhưng lỗi trên server"*.
@@ -65,17 +74,37 @@ pre: " <b> 4.1. </b> "
 - **Lợi ích cốt lõi:** Tính cô lập (Isolation), khả năng di động (Portability) và khởi động siêu nhanh so với máy ảo (VM) truyền thống. 
 - Ứng dụng Docker vào quy trình CI/CD để tự động hóa việc triển khai mã nguồn.
 
+![Docker - A containerization technology - Bảo Huỳnh](/images/4-EventParticipated/4.1-Event1/docker_bao_huynh.png)
+
+![Docker Introduction & Disclaimer - Bảo Huỳnh](/images/4-EventParticipated/4.1-Event1/docker_disclaimer.png)
+
+
 #### 3. Bảo mật Web nâng cao: AWS WAF + Machine Learning (Lê Hoàng Gia Đại)
 - **Giới hạn của WAF truyền thống:** Các rules tĩnh dựa trên IP hoặc chuỗi định sẵn không còn đủ sức chống lại các cuộc tấn công Zero-day hoặc Botnet tinh vi.
 - **Sức mạnh của Machine Learning:** Cách tích hợp ML vào AWS WAF để phân tích hành vi người dùng, phát hiện các mẫu truy cập bất thường (anomaly traffic) và tự động cập nhật rule chặn đứng các cuộc tấn công chưa từng có tiền lệ.
+
+![WAF + ML for Cyber Attack Detection - Lê Hoàng Gia Đại](/images/4-EventParticipated/4.1-Event1/waf_ml_title.png)
+
+![WAF + ML Agenda - Lê Hoàng Gia Đại](/images/4-EventParticipated/4.1-Event1/waf_ml_agenda.png)
+
 
 #### 4. Cơ sở dữ liệu đồ thị: AWS Neptune (Việt Phát)
 - **Graph Database vs Relational Database:** Phân tích lý do tại sao CSDL quan hệ (SQL) gặp thắt nút cổ chai khi xử lý dữ liệu có tính liên kết chéo phức tạp.
 - **AWS Neptune:** Dịch vụ CSDL đồ thị được quản lý hoàn toàn. Ứng dụng thực tế trong việc xây dựng Knowledge Base, hệ thống gợi ý (Recommendation System) và phát hiện gian lận (Fraud Detection) bằng cách truy vấn các "Đỉnh" (Nodes) và "Cạnh" (Edges).
 
+![AWS Neptune Welcome - Việt Phát](/images/4-EventParticipated/4.1-Event1/neptune_welcome.png)
+
+![Build GraphRAG applications using Amazon Bedrock and Amazon Neptune - Việt Phát](/images/4-EventParticipated/4.1-Event1/graphrag_neptune.png)
+
+
 #### 5. Giải pháp Máy chủ Game trên Đám mây (Nguyễn Quốc Bảo)
 - Giải quyết bài toán độ trễ (latency) và đồng bộ trạng thái (state synchronization) cho game nhiều người chơi (Multiplayer).
 - Hướng dẫn cách kết nối client phát triển bằng **Godot Engine** với các cụm máy chủ game được tự động mở rộng (Auto-scaling) trên hạ tầng Cloud, đảm bảo trải nghiệm mượt mà dù lượng người chơi tăng đột biến.
+
+![Multiplayer in the Cloud: Connecting Godot Clients with AWS WebSockets - Nguyễn Quốc Bảo](/images/4-EventParticipated/4.1-Event1/game_server_title.png)
+
+![Multiplayer Game Server Table of Contents - Nguyễn Quốc Bảo](/images/4-EventParticipated/4.1-Event1/game_server_contents.png)
+
 
 ---
 

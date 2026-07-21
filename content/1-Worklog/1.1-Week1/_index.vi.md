@@ -25,3 +25,20 @@ pre: " <b> 1.1. </b> "
 - Xác định rõ kiến trúc hạ tầng tổng quan và các tài nguyên AWS cần sử dụng.
 - Hoàn thành thiết lập tài khoản và trang báo cáo cá nhân.
 - Thống nhất được tài liệu đặc tả hạ tầng ban đầu của dự án.
+
+### Minh họa hình ảnh thực hành
+
+1. **Khởi tạo và cấu hình VPC (`petshop-bbc-vpc`)**:
+   ![Khởi tạo VPC thành công](/images/1-Worklog/1.1-Week1/vpc_created.png)
+
+2. **Tạo Subnet trong VPC (`petshop-bbc-01`)**:
+   ![Tạo Subnet thành công](/images/1-Worklog/1.1-Week1/subnet_created.png)
+
+3. **Khởi chạy máy chủ EC2 Instance**:
+   ![Khởi chạy EC2 thành công](/images/1-Worklog/1.1-Week1/ec2_launched.png)
+
+4. **Tạo AWS Lambda Function (`http-function-url-tutorial`)**:
+   ![Tạo Lambda function thành công](/images/1-Worklog/1.1-Week1/lambda_created.png)
+
+5. **Cấu hình AWS Budget (`petshop-bbc-budget`) quản lý chi phí**:
+   ![Tạo AWS Budget thành công](/images/1-Worklog/1.1-Week1/budget_created.png)

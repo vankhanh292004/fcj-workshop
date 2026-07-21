@@ -56,7 +56,16 @@ pre: " <b> 4.1. </b> "
 
 #### 1. Career Orientation and Teamwork Skills
 - **Career Roadmap (Vinh Tran):** Outlined the realistic journey from a basic user-support IT Helpdesk to a Senior Sysadmin position. Emphasized the importance of self-learning foundational knowledge (Linux, Networking), scripting skills (Bash/Python), and the inevitable shift towards Cloud/DevOps.
+
+![From IT Helpdesk to Senior Sysadmin - Vinh Tran](/images/4-EventParticipated/4.1-Event1/vinh_tran_career.png)
+
+![This is not a story about extraordinary success - Vinh Tran](/images/4-EventParticipated/4.1-Event1/vinh_tran_story.png)
+
 - **Teamwork Skills (Truong Phuoc):** Explored conflict resolution, accurate Git workflow processes within a team, and the importance of transparent communication. Good technical skills are not enough; a great engineer must know how to coordinate and understand their teammates.
+
+![The Art of Effective Teamwork - Truong Phuoc](/images/4-EventParticipated/4.1-Event1/truong_phuoc_teamwork.png)
+
+
 
 #### 2. The Containerization Era with Docker (Bao Huynh)
 - Radically solving the *"It works on my machine but fails on the server"* dilemma.
@@ -64,17 +73,37 @@ pre: " <b> 4.1. </b> "
 - **Core Benefits:** Isolation, Portability, and ultra-fast boot times compared to traditional Virtual Machines (VMs).
 - Applying Docker in CI/CD pipelines to automate source code deployment.
 
+![Docker - A containerization technology - Bao Huynh](/images/4-EventParticipated/4.1-Event1/docker_bao_huynh.png)
+
+![Docker Introduction & Disclaimer - Bao Huynh](/images/4-EventParticipated/4.1-Event1/docker_disclaimer.png)
+
+
 #### 3. Advanced Web Security: AWS WAF + Machine Learning (Le Hoang Gia Dai)
 - **Limitations of traditional WAF:** Static rules based on IP or predefined strings are no longer sufficient to combat sophisticated Zero-day or Botnet attacks.
 - **The Power of Machine Learning:** Integrating ML into AWS WAF to analyze user behavior, detect anomalous traffic patterns, and automatically update rules to block unprecedented attacks.
+
+![WAF + ML for Cyber Attack Detection - Le Hoang Gia Dai](/images/4-EventParticipated/4.1-Event1/waf_ml_title.png)
+
+![WAF + ML Agenda - Le Hoang Gia Dai](/images/4-EventParticipated/4.1-Event1/waf_ml_agenda.png)
+
 
 #### 4. Graph Databases: AWS Neptune (Viet Phat)
 - **Graph Database vs Relational Database:** Analyzed why relational databases (SQL) encounter bottlenecks when processing highly interconnected cross-data.
 - **AWS Neptune:** A fully managed graph database service. Practical applications in building Knowledge Bases, Recommendation Systems, and Fraud Detection by querying "Nodes" and "Edges".
 
+![AWS Neptune Welcome - Viet Phat](/images/4-EventParticipated/4.1-Event1/neptune_welcome.png)
+
+![Build GraphRAG applications using Amazon Bedrock and Amazon Neptune - Viet Phat](/images/4-EventParticipated/4.1-Event1/graphrag_neptune.png)
+
+
 #### 5. Cloud Game Server Solutions (Nguyen Quoc Bao)
 - Solving latency and state synchronization challenges for Multiplayer games.
 - Guidelines on connecting clients developed with the **Godot Engine** to auto-scaling game server clusters on Cloud infrastructure, ensuring a smooth experience even during sudden player spikes.
+
+![Multiplayer in the Cloud: Connecting Godot Clients with AWS WebSockets - Nguyen Quoc Bao](/images/4-EventParticipated/4.1-Event1/game_server_title.png)
+
+![Multiplayer Game Server Table of Contents - Nguyen Quoc Bao](/images/4-EventParticipated/4.1-Event1/game_server_contents.png)
+
 
 ---
 
