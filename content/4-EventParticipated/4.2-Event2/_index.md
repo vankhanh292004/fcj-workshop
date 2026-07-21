@@ -53,9 +53,13 @@ pre: " <b> 4.2. </b> "
 - **The Importance of "Execution":** Ideas only play a small part; rapid deployment capability is the true key to success. Steve shared his practical journey of building a contact center system and conducting digital transformation on AWS.
 - **Approach Strategy:** Guidance on finding "champion customers" to validate technology ideas by solving direct business pain points.
 
+![AgenticOps for your Cloud - Steve Tran (Cloud Thinker)](/images/4-EventParticipated/4.2-Event2/event2-1.png)
+
 #### 2. Voice AI Architecture and Challenges
 - **Operational Mechanisms:** Clarified the differences between the new generation *Speech-to-Speech* architecture and the traditional 3-component model (*Speech-to-Text -> LLM -> Text-to-Speech*).
 - **Vietnam-Specific Challenges:** Deep dive into extreme technical hurdles such as processing regional accents, handling natural bot barge-in features, and meeting the strict security standards of the banking industry (e.g., VBBank, VIP).
+
+![Voice AI & Practical Applications](/images/4-EventParticipated/4.2-Event2/event2-2.png)
 
 #### 3. Revolutionizing DevOps with AI Agents
 - **Automated Incident Investigation:** Introduced AI Agents capable of assisting operations teams with root cause analysis when systems encounter failures.

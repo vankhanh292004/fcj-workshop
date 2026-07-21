@@ -53,9 +53,13 @@ pre: " <b> 4.2. </b> "
 - **Tầm quan trọng của việc "Execution" (Thực thi):** Ý tưởng chỉ chiếm một phần nhỏ, khả năng triển khai nhanh chóng mới là chìa khóa. Anh Steve chia sẻ hành trình thực tế xây dựng hệ thống contact center và chuyển đổi số lên AWS.
 - **Chiến lược tiếp cận:** Hướng dẫn cách tìm kiếm "champion customers" (khách hàng tiên phong) để đưa ý tưởng công nghệ vào giải quyết trực tiếp bài toán doanh nghiệp.
 
+![AgenticOps for your Cloud - Steve Tran (Cloud Thinker)](/images/4-EventParticipated/4.2-Event2/event2-1.png)
+
 #### 2. Kiến trúc và Thách thức của Voice AI
 - **Cơ chế vận hành:** Làm rõ sự khác biệt giữa kiến trúc *Speech-to-Speech* thế hệ mới và mô hình 3 thành phần truyền thống (*Speech-to-Text -> LLM -> Text-to-Speech*).
 - **Bài toán đặc thù tại Việt Nam:** Thảo luận sâu về các thách thức kỹ thuật cực khó như xử lý giọng địa phương/vùng miền, tính năng ngắt lời tự nhiên (barge-in) của bot, và đáp ứng tiêu chuẩn bảo mật khắt khe trong ngành ngân hàng (như VBBank, VIP).
+
+![Voice AI & Practical Applications](/images/4-EventParticipated/4.2-Event2/event2-2.png)
 
 #### 3. Cách mạng hóa DevOps với AI Agent
 - **Tự động hóa điều tra sự cố:** Giới thiệu các AI Agent có khả năng hỗ trợ đội ngũ vận hành phân tích nguyên nhân gốc rễ (root cause analysis) khi hệ thống gặp lỗi.
