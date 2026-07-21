@@ -30,6 +30,8 @@ pre: " <b> 4.3. </b> "
 - **Industry-first Thinking:** The importance of deep domain knowledge over pure coding skills.
 - *(Speaker: Mr. Hung)*
 
+![A Decade of Investment 2015-2026 - Speaker Mr. Hung](/images/4-EventParticipated/4.3-Event3/event3-1.png)
+
 #### Real-world Perspectives from a Data Engineer (10:00 - 10:45 AM)
 - **School vs. Reality:** The "harsh" contrast between theoretical exercises and actual enterprise projects.
 - **Enterprise Problems:** Deep dive into the 3 core pillars of Data Engineering: Data Security, Data Quality, and System Scalability.

@@ -30,6 +30,8 @@ pre: " <b> 4.3. </b> "
 - **Tư duy Industry-first:** Tầm quan trọng của việc hiểu sâu nghiệp vụ ngành thay vì chỉ biết thuần túy về kỹ thuật code.
 - *(Diễn giả: Anh Hưng)*
 
+![A Decade of Investment 2015-2026 - Diễn giả Anh Hưng](/images/4-EventParticipated/4.3-Event3/event3-1.png)
+
 #### Góc nhìn thực chiến từ Kỹ sư Dữ liệu (10:00 AM - 10:45 AM)
 - **School vs. Reality:** Sự khác biệt "phũ phàng" giữa bài tập lý thuyết và dự án thực tế.
 - **Bài toán doanh nghiệp:** Đi sâu vào 3 yếu tố cốt lõi của Data Engineering: Bảo mật dữ liệu (Security), Chất lượng dữ liệu (Data Quality) và Khả năng mở rộng (Scalability).
