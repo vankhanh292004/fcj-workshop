@@ -98,4 +98,5 @@ Attending the FCAJ Community Day provided me with a practical and sharp perspect
 Unlike theoretical fluff, the speakers presented highly "realistic" problems (such as AI needing to comprehend Vietnamese regional accents, or configuring AI to prevent data leaks to the Internet). In particular, the session on Amazon Q and the MCP protocol truly opened a new direction for me in building secure GenAI applications for enterprises. The break time was also an excellent opportunity to learn a strong "execution" mindset from industry experts.
 
 #### Event Photos
-*(Insert check-in photos, speakers' presentation slides, or FCAJ community group photos here)*
+![FCAJ Community Day - Event Photo 1](/images/4-EventParticipated/4.2-Event2/event2-1.png)
+![FCAJ Community Day - Event Photo 2](/images/4-EventParticipated/4.2-Event2/event2-2.png)
